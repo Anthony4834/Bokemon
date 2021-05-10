@@ -1,0 +1,9421 @@
+
+battle_textures.png
+size: 1024,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+abra_back_sprite
+  rotate: false
+  xy: 2, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+abra_sprite
+  rotate: false
+  xy: 2, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+background
+  rotate: false
+  xy: 852, 126
+  size: 46, 112
+  orig: 46, 112
+  offset: 0, 0
+  index: -1
+charmander_back_sprite
+  rotate: false
+  xy: 100, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+charmander_sprite
+  rotate: false
+  xy: 100, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+dodrio_back_sprite
+  rotate: false
+  xy: 198, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+dodrio_sprite
+  rotate: false
+  xy: 198, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+eevee_back_sprite
+  rotate: false
+  xy: 296, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+eevee_sprite
+  rotate: false
+  xy: 688, 158
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+hitmark
+  rotate: false
+  xy: 900, 206
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+lapras_back_sprite
+  rotate: false
+  xy: 296, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+lapras_sprite
+  rotate: false
+  xy: 688, 76
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+pidgeotto_back_sprite
+  rotate: false
+  xy: 394, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pidgeotto_sprite
+  rotate: false
+  xy: 770, 158
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+pidgey_back_sprite
+  rotate: false
+  xy: 394, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pidgey_sprite
+  rotate: false
+  xy: 492, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+platform
+  rotate: false
+  xy: 2, 10
+  size: 64, 32
+  orig: 64, 32
+  offset: 0, 0
+  index: -1
+pokeball
+  rotate: false
+  xy: 688, 62
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+pokeball_effect
+  rotate: false
+  xy: 770, 84
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 0
+pokeball_effect
+  rotate: false
+  xy: 836, 150
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 1
+pokeball_effect
+  rotate: false
+  xy: 844, 150
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 2
+pokeball_effect
+  rotate: false
+  xy: 2, 2
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 3
+pokeball_effect
+  rotate: false
+  xy: 68, 36
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 4
+pokeball_effect
+  rotate: false
+  xy: 900, 198
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 5
+pokeball_effect
+  rotate: false
+  xy: 934, 232
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 6
+pokeball_effect
+  rotate: false
+  xy: 688, 54
+  size: 6, 6
+  orig: 6, 6
+  offset: 0, 0
+  index: 7
+skarmory_back_sprite
+  rotate: false
+  xy: 492, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+skarmory_sprite
+  rotate: false
+  xy: 590, 142
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+weedle_back_sprite
+  rotate: false
+  xy: 590, 44
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+weedle_sprite
+  rotate: false
+  xy: 770, 92
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+
+battle_textures2.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/0
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/1
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/10
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/11
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/12
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/13
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/14
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/15
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/16
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/17
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/18
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/19
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/2
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/20
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/21
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/22
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/23
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/24
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/25
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/26
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/27
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/28
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/29
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/3
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/30
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/31
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/32
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/33
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/34
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/35
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/36
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/37
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/38
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/39
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/4
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/40
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/41
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/42
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/43
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/44
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/45
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/46
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/47
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/48
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/49
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/5
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/50
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/51
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/52
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/53
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/54
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/55
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/56
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/57
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/58
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/59
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/6
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/60
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/61
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/62
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/63
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/64
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/65
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/66
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/67
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/68
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/69
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/7
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/70
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/71
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/72
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/73
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/74
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/75
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/76
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/77
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/78
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/79
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/8
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/80
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/81
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/82
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/83
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/84
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/85
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/86
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/87
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/88
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/89
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/9
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/90
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/91
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/92
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/93
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/94
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/95
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/96
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/97
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/98
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/99
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures3.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/100
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/101
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/102
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/103
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/104
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/105
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/106
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/107
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/108
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/109
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/110
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/111
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/112
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/113
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/114
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/115
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/116
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/117
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/118
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/119
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/120
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/121
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/122
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/123
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/124
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/125
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/126
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/127
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/128
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/129
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/130
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/131
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/132
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/133
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/134
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/135
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/136
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/137
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/138
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/139
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/140
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/141
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/142
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/143
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/144
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/145
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/146
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/147
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/148
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/149
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/151
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/152
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/153
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/154
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/155
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/156
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/157
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/158
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/159
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/160
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/161
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/162
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/163
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/164
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/165
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/166
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/167
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/168
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/169
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/170
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/171
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/172
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/173
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/174
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/175
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/176
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/177
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/178
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/179
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/180
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/181
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/182
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/183
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/184
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/185
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/186
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/187
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/188
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/189
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/190
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/191
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/192
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/193
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/194
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/195
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/196
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/197
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/198
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/199
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/200
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures4.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/201
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/202
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/203
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/204
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/205
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/206
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/207
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/208
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/209
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/210
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/211
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/212
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/213
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/214
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/215
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/216
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/217
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/218
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/219
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/220
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/221
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/222
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/223
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/224
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/225
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/226
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/227
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/228
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/229
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/230
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/231
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/232
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/233
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/234
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/235
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/236
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/237
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/238
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/239
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/240
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/241
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/242
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/243
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/244
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/245
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/246
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/247
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/248
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/249
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/250
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/251
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/252
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/253
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/254
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/255
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/256
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/257
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/258
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/259
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/260
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/261
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/262
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/263
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/264
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/265
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/266
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/267
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/268
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/269
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/270
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/271
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/272
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/273
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/274
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/275
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/276
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/277
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/278
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/279
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/280
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/281
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/282
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/283
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/284
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/285
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/286
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/287
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/288
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/289
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/290
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/291
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/292
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/293
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/294
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/295
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/296
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/297
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/298
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/299
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/300
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures5.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/301
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/302
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/303
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/304
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/305
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/306
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/307
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/308
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/309
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/310
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/311
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/312
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/313
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/314
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/315
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/316
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/317
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/318
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/319
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/320
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/321
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/322
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/323
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/324
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/325
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/326
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/327
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/328
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/329
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/330
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/331
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/332
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/333
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/334
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/335
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/336
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/337
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/338
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/339
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/340
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/341
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/342
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/343
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/344
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/345
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/346
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/347
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/348
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/349
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/350
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/351
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/352
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/353
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/354
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/355
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/356
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/357
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/358
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/359
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/360
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/361
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/362
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/363
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/364
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/365
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/366
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/367
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/368
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/369
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/370
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/371
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/372
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/373
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/374
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/375
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/376
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/377
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/378
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/379
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/380
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/381
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/382
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/383
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/384
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/385
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/386
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/387
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/388
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/389
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/390
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/391
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/392
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/393
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/394
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/395
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/396
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/397
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/398
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/399
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/400
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures6.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/401
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/402
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/403
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/404
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/405
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/406
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/407
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/408
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/409
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/410
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/411
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/412
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/413
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/414
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/415
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/416
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/417
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/418
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/419
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/420
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/421
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/422
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/423
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/424
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/425
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/426
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/427
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/428
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/429
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/430
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/431
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/432
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/433
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/434
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/435
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/436
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/437
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/438
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/439
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/440
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/441
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/442
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/443
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/444
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/445
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/446
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/447
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/448
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/449
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/450
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/451
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/452
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/453
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/454
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/455
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/456
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/457
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/458
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/459
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/460
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/461
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/462
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/463
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/464
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/465
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/466
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/467
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/468
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/469
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/470
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/471
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/472
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/473
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/474
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/475
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/476
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/477
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/478
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/479
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/480
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/481
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/482
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/483
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/484
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/485
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/486
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/487
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/488
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/489
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/490
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/491
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/492
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/493
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/494
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/495
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/496
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/497
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/498
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/499
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/500
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures7.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/501
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/502
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/503
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/504
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/505
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/506
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/507
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/508
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/509
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/510
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/511
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/512
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/513
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/514
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/515
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/516
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/517
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/518
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/519
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/520
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/521
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/522
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/523
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/524
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/525
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/526
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/527
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/528
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/529
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/530
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/531
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/532
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/533
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/534
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/535
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/536
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/537
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/538
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/539
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/540
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/541
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/542
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/543
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/544
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/545
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/546
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/547
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/548
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/549
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/550
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/551
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/552
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/553
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/554
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/555
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/556
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/557
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/558
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/559
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/560
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/561
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/562
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/563
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/564
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/565
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/566
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/567
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/568
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/569
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/570
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/571
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/572
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/573
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/574
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/575
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/576
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/577
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/578
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/579
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/580
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/581
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/582
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/583
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/584
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/585
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/586
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/587
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/588
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/589
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/590
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/591
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/592
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/593
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/594
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/595
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/596
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/597
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/598
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/599
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/600
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures8.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_back_sprites/150
+  rotate: false
+  xy: 394, 410
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/386em
+  rotate: false
+  xy: 492, 524
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/386fr
+  rotate: false
+  xy: 590, 622
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/386lg
+  rotate: false
+  xy: 688, 720
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/601
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/602
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/603
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/604
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/605
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/606
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/607
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/608
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/609
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/610
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/611
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/612
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/613
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/614
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/615
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/616
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/617
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/618
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/619
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/620
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/621
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/622
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/623
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/624
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/625
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/626
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/627
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/628
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/629
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/630
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/631
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/632
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/633
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/634
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/635
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/636
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/637
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/638
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/639
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/640
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/641
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/642
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/643
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/644
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/645
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/646
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/647
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/648
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_back_sprites/649
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures9.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/0
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/1
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/10
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/11
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/12
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/13
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/14
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/15
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/16
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/17
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/18
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/19
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/2
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/20
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/21
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/22
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/23
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/24
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/25
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/26
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/27
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/28
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/29
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/3
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/30
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/31
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/32
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/33
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/34
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/35
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/36
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/37
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/38
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/39
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/4
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/40
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/41
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/42
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/43
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/44
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/45
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/46
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/47
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/48
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/49
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/5
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/50
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/51
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/52
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/53
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/54
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/55
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/56
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/57
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/58
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/59
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/6
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/60
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/61
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/62
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/63
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/64
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/65
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/66
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/67
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/68
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/69
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/7
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/70
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/71
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/72
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/73
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/74
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/75
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/76
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/77
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/78
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/79
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/8
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/80
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/81
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/82
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/83
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/84
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/85
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/86
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/87
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/88
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/89
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/9
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/90
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/91
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/92
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/93
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/94
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/95
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/96
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/97
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/98
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/99
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures10.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/100
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/101
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/102
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/103
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/104
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/105
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/106
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/107
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/108
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/109
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/110
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/111
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/112
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/113
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/114
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/115
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/116
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/117
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/118
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/119
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/120
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/121
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/122
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/123
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/124
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/125
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/126
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/127
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/128
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/129
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/130
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/131
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/132
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/133
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/134
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/135
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/136
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/137
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/138
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/139
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/140
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/141
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/142
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/143
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/144
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/145
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/146
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/147
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/148
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/149
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/151
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/152
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/153
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/154
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/155
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/156
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/157
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/158
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/159
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/160
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/161
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/162
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/163
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/164
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/165
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/166
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/167
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/168
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/169
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/170
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/171
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/172
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/173
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/174
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/175
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/176
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/177
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/178
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/179
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/180
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/181
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/182
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/183
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/184
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/185
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/186
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/187
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/188
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/189
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/190
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/191
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/192
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/193
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/194
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/195
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/196
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/197
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/198
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/199
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/200
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures11.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/201
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/202
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/203
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/204
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/205
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/206
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/207
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/208
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/209
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/210
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/211
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/212
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/213
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/214
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/215
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/216
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/217
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/218
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/219
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/220
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/221
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/222
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/223
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/224
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/225
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/226
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/227
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/228
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/229
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/230
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/231
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/232
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/233
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/234
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/235
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/236
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/237
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/238
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/239
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/240
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/241
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/242
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/243
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/244
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/245
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/246
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/247
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/248
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/249
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/250
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/251
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/252
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/253
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/254
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/255
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/256
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/257
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/258
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/259
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/260
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/261
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/262
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/263
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/264
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/265
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/266
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/267
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/268
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/269
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/270
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/271
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/272
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/273
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/274
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/275
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/276
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/277
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/278
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/279
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/280
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/281
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/282
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/283
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/284
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/285
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/286
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/287
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/288
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/289
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/290
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/291
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/292
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/293
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/294
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/295
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/296
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/297
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/298
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/299
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/300
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures12.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/301
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/302
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/303
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/304
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/305
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/306
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/307
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/308
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/309
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/310
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/311
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/312
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/313
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/314
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/315
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/316
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/317
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/318
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/319
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/320
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/321
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/322
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/323
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/324
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/325
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/326
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/327
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/328
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/329
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/330
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/331
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/332
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/333
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/334
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/335
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/336
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/337
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/338
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/339
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/340
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/341
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/342
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/343
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/344
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/345
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/346
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/347
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/348
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/349
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/350
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/351
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/352
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/353
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/354
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/355
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/356
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/357
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/358
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/359
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/360
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/361
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/362
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/363
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/364
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/365
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/366
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/367
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/368
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/369
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/370
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/371
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/372
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/373
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/374
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/375
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/376
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/377
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/378
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/379
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/380
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/381
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/382
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/383
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/384
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/385
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/386
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/387
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/388
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/389
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/390
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/391
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/392
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/393
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/394
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/395
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/396
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/397
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/398
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/399
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/400
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures13.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/401
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/402
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/403
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/404
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/405
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/406
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/407
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/408
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/409
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/410
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/411
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/412
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/413
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/414
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/415
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/416
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/417
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/418
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/419
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/420
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/421
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/422
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/423
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/424
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/425
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/426
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/427
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/428
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/429
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/430
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/431
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/432
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/433
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/434
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/435
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/436
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/437
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/438
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/439
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/440
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/441
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/442
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/443
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/444
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/445
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/446
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/447
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/448
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/449
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/450
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/451
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/452
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/453
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/454
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/455
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/456
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/457
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/458
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/459
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/460
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/461
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/462
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/463
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/464
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/465
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/466
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/467
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/468
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/469
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/470
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/471
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/472
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/473
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/474
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/475
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/476
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/477
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/478
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/479
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/480
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/481
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/482
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/483
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/484
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/485
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/486
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/487
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/488
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/489
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/490
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/491
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/492
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/493
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/494
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/495
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/496
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/497
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/498
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/499
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/500
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures14.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/501
+  rotate: false
+  xy: 2, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/502
+  rotate: false
+  xy: 2, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/503
+  rotate: false
+  xy: 100, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/504
+  rotate: false
+  xy: 2, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/505
+  rotate: false
+  xy: 100, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/506
+  rotate: false
+  xy: 198, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/507
+  rotate: false
+  xy: 2, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/508
+  rotate: false
+  xy: 100, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/509
+  rotate: false
+  xy: 198, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/510
+  rotate: false
+  xy: 296, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/511
+  rotate: false
+  xy: 2, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/512
+  rotate: false
+  xy: 100, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/513
+  rotate: false
+  xy: 198, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/514
+  rotate: false
+  xy: 296, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/515
+  rotate: false
+  xy: 394, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/516
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/517
+  rotate: false
+  xy: 100, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/518
+  rotate: false
+  xy: 198, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/519
+  rotate: false
+  xy: 296, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/520
+  rotate: false
+  xy: 394, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/521
+  rotate: false
+  xy: 492, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/522
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/523
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/524
+  rotate: false
+  xy: 198, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/525
+  rotate: false
+  xy: 296, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/526
+  rotate: false
+  xy: 394, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/527
+  rotate: false
+  xy: 492, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/528
+  rotate: false
+  xy: 590, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/529
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/530
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/531
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/532
+  rotate: false
+  xy: 296, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/533
+  rotate: false
+  xy: 394, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/534
+  rotate: false
+  xy: 492, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/535
+  rotate: false
+  xy: 590, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/536
+  rotate: false
+  xy: 688, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/537
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/538
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/539
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/540
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/541
+  rotate: false
+  xy: 394, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/542
+  rotate: false
+  xy: 492, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/543
+  rotate: false
+  xy: 590, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/544
+  rotate: false
+  xy: 688, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/545
+  rotate: false
+  xy: 786, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/546
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/547
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/548
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/549
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/550
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/551
+  rotate: false
+  xy: 492, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/552
+  rotate: false
+  xy: 590, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/553
+  rotate: false
+  xy: 688, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/554
+  rotate: false
+  xy: 786, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/555
+  rotate: false
+  xy: 884, 884
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/556
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/557
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/558
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/559
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/560
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/561
+  rotate: false
+  xy: 590, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/562
+  rotate: false
+  xy: 688, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/563
+  rotate: false
+  xy: 786, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/564
+  rotate: false
+  xy: 884, 786
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/565
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/566
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/567
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/568
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/569
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/570
+  rotate: false
+  xy: 688, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/571
+  rotate: false
+  xy: 786, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/572
+  rotate: false
+  xy: 884, 688
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/573
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/574
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/575
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/576
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/577
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/578
+  rotate: false
+  xy: 786, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/579
+  rotate: false
+  xy: 884, 590
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/580
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/581
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/582
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/583
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/584
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/585
+  rotate: false
+  xy: 884, 492
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/586
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/587
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/588
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/589
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/590
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/591
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/592
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/593
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/594
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/595
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/596
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/597
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/598
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/599
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/600
+  rotate: false
+  xy: 884, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+
+battle_textures15.png
+size: 1024,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pokemon_sprites/150
+  rotate: false
+  xy: 884, 18
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+pokemon_sprites/601
+  rotate: false
+  xy: 2, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/602
+  rotate: false
+  xy: 2, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/603
+  rotate: false
+  xy: 100, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/604
+  rotate: false
+  xy: 2, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/605
+  rotate: false
+  xy: 100, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/606
+  rotate: false
+  xy: 198, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/607
+  rotate: false
+  xy: 2, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/608
+  rotate: false
+  xy: 100, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/609
+  rotate: false
+  xy: 198, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/610
+  rotate: false
+  xy: 296, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/611
+  rotate: false
+  xy: 2, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/612
+  rotate: false
+  xy: 100, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/613
+  rotate: false
+  xy: 198, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/614
+  rotate: false
+  xy: 296, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/615
+  rotate: false
+  xy: 394, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/616
+  rotate: false
+  xy: 100, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/617
+  rotate: false
+  xy: 198, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/618
+  rotate: false
+  xy: 296, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/619
+  rotate: false
+  xy: 394, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/620
+  rotate: false
+  xy: 492, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/621
+  rotate: false
+  xy: 198, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/622
+  rotate: false
+  xy: 296, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/623
+  rotate: false
+  xy: 394, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/624
+  rotate: false
+  xy: 492, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/625
+  rotate: false
+  xy: 590, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/626
+  rotate: false
+  xy: 296, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/627
+  rotate: false
+  xy: 394, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/628
+  rotate: false
+  xy: 492, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/629
+  rotate: false
+  xy: 590, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/630
+  rotate: false
+  xy: 688, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/631
+  rotate: false
+  xy: 394, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/632
+  rotate: false
+  xy: 492, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/633
+  rotate: false
+  xy: 590, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/634
+  rotate: false
+  xy: 688, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/635
+  rotate: false
+  xy: 786, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/636
+  rotate: false
+  xy: 492, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/637
+  rotate: false
+  xy: 590, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/638
+  rotate: false
+  xy: 688, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/639
+  rotate: false
+  xy: 786, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/640
+  rotate: false
+  xy: 884, 394
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/641
+  rotate: false
+  xy: 590, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/642
+  rotate: false
+  xy: 688, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/643
+  rotate: false
+  xy: 786, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/644
+  rotate: false
+  xy: 884, 296
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/645
+  rotate: false
+  xy: 688, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/646
+  rotate: false
+  xy: 786, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/647
+  rotate: false
+  xy: 884, 198
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/648
+  rotate: false
+  xy: 786, 2
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
+pokemon_sprites/649
+  rotate: false
+  xy: 884, 100
+  size: 96, 96
+  orig: 96, 96
+  offset: 0, 0
+  index: -1
