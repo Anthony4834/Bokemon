@@ -2,6 +2,7 @@ package com.bokemon.screen;
 
 import java.util.ArrayList;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.badlogic.gdx.Gdx;
@@ -11,6 +12,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.utils.Json;
 import com.bokemon.Bokemon;
 import com.bokemon.Settings;
 import com.bokemon.battle.BATTLE_STATE;
@@ -24,6 +26,7 @@ import com.bokemon.model.pokemon.Capture_Calculator;
 import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.model.pokemon.Pokemon_Sprites;
 import com.bokemon.model.world.AVAILABLE_LEVELS;
+import com.bokemon.util.Music_Reference;
 import com.bokemon.util.Pokemon_Data;
 
 public class BattleScreen extends AbstractScreen {
@@ -33,6 +36,8 @@ public class BattleScreen extends AbstractScreen {
 	private TextureAtlas uiAtlas;
 	private BattleController controller;
 	private JSONObject ref;
+	private JSONObject typeRef;
+	private Json json = new Json();
 	private BitmapFont main = new BitmapFont();
 	private BitmapFont sub = new BitmapFont();
 	private BitmapFont name = new BitmapFont();
@@ -52,6 +57,11 @@ public class BattleScreen extends AbstractScreen {
 	private TextureRegion allyPokemonTexture;
 	private TextureRegion enemyPokemonTexture;
 	
+	private ArrayList<String> enemyWeaknesses;
+	private ArrayList<String> enemyStrengths;
+	private ArrayList<String> allyWeaknesses;
+	private ArrayList<String> allyStrengths;
+	
 	private Platform enemyPlatform;
 	private Platform allyPlatform;
 	
@@ -67,9 +77,12 @@ public class BattleScreen extends AbstractScreen {
 	
 	public BattleScreen(Bokemon app, String enemyName, boolean isWild) {
 		super(app);
-		ref = Pokemon_Data.get();
+		ref = Pokemon_Data.get("pokemon");
+		typeRef = Pokemon_Data.get("types");
 		
-		JSONObject enemyInfo = ref.getJSONObject("SKARMORY");
+		
+		
+		JSONObject enemyInfo = ref.getJSONObject("HAUNTER");
 		this.enemy = new Pokemon(enemyInfo.getJSONObject("ORIGIN_NAME").get("value").toString(), 
 				Integer.valueOf(enemyInfo.getJSONObject("ID").get("value").toString()),
 				Integer.valueOf(enemyInfo.getJSONObject("BASE_HP").get("value").toString()), 
@@ -78,6 +91,7 @@ public class BattleScreen extends AbstractScreen {
 				Integer.valueOf(enemyInfo.getJSONObject("BASE_SPATK").get("value").toString()),
 				Integer.valueOf(enemyInfo.getJSONObject("BASE_SPDEF").get("value").toString()),
 				Integer.valueOf(enemyInfo.getJSONObject("BASE_SPD").get("value").toString()),
+				json.fromJson(JSONArray.class, enemyInfo.getJSONObject("TYPES").getString("value")),
 				Integer.valueOf(enemyInfo.getJSONObject("CAPTURE_RATE").get("value").toString()),
 				Integer.valueOf(enemyInfo.getJSONObject("SIZE").get("value").toString()));
 
@@ -94,10 +108,19 @@ public class BattleScreen extends AbstractScreen {
 		party = buildParty();
 		activePokemon = party.get(0);
 		
+		enemyWeaknesses = enemy.getWeaknesses(typeRef, enemy.getTypes());
+		enemyStrengths = enemy.getStrengths(typeRef, enemy.getTypes());
+		allyWeaknesses = activePokemon.getWeaknesses(typeRef, activePokemon.getTypes());
+		allyStrengths = activePokemon.getStrengths(typeRef, activePokemon.getTypes());
+		
+		System.out.println(enemyWeaknesses);
+		System.out.println(enemyStrengths);
+		System.out.println(allyWeaknesses);
+		System.out.println(allyStrengths);
+
+		
 		allyPokemonTexture = atlas.findRegion("pokemon_back_sprites/" + activePokemon.getId());
 		enemyPokemonTexture = atlas.findRegion("pokemon_sprites/" + enemy.getId());
-		
-		loaded = true;
 		
 		this.state = BATTLE_STATE.INIT;
 		this.selected = SELECTED.ATTACK;
@@ -148,6 +171,7 @@ public class BattleScreen extends AbstractScreen {
 						Integer.valueOf(info.getJSONObject("BASE_SPATK").get("value").toString()),
 						Integer.valueOf(info.getJSONObject("BASE_SPDEF").get("value").toString()),
 						Integer.valueOf(info.getJSONObject("BASE_SPD").get("value").toString()),
+						json.fromJson(JSONArray.class, info.getJSONObject("TYPES").getString("value")),
 						Integer.valueOf(info.getJSONObject("CAPTURE_RATE").get("value").toString()),
 						Integer.valueOf(info.getJSONObject("SIZE").get("value").toString()));
 				
@@ -264,11 +288,27 @@ public class BattleScreen extends AbstractScreen {
 				this.currentDialog = "A wild \n" + enemy.getName().toUpperCase() + " attacks!";
 		}
 	}
-	public void attackPokemon() {
+	public void attackPokemon(String moveType) {
 		if(this.state == BATTLE_STATE.ATTACK) {
 			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * 40 * (activePokemon.getAtk() / enemy.getDef())) / 50) + 2;
 			double rand = Math.random() * (1 - 0.85) + 0.85;
 			int dPwr = (int) (attackPower * rand);
+			if( ( enemy.isType("flying") && moveType.equals("GROUND") ) || ( enemy.isType("ghost") && moveType.equals("NORMAL") ) || ( enemy.isType("normal") && moveType.equals("GHOST") )) {
+				dPwr = 0;
+				System.out.println("NO EFFECT");
+			}
+			if(enemyWeaknesses.contains(moveType)) {
+				dPwr = dPwr * 2;
+				System.out.println("SUPER EFFECTIVE");
+			}
+			if(enemyStrengths.contains(moveType)) {
+				dPwr = dPwr / 2;
+				System.out.println("NOT VERY EFFECTIVE");
+			}
+			if(Math.random() > 0.875) {
+				dPwr = dPwr * 2;
+				System.out.println("CRITICAL");
+			}
 			System.out.println(dPwr);
 			
 			int dHp = enemy.getHp() - dPwr;
@@ -329,6 +369,7 @@ public class BattleScreen extends AbstractScreen {
 		this.pokeballShakes = output;
 	}
 	public void endBattle() {
+		Music_Reference.current.dispose();
 		this.initTransition(this, new GameScreen(this.getApp()));
 	}
 	@Override
@@ -351,7 +392,7 @@ public class BattleScreen extends AbstractScreen {
 
 	@Override
 	public void render(float delta) {
-		if(loaded == true) {
+		
 			batch.begin();
 			
 			batch.draw(background, 
@@ -369,6 +410,7 @@ public class BattleScreen extends AbstractScreen {
 					if(enemyPlatform.getX() < 28*Settings.SCALED_TILE_SIZE) {
 						enemyPlatform.setX(enemyPlatform.getX() + platformDelta*speed);
 					} else {
+						this.loaded = true;
 						this.show();
 					}
 			batch.draw(enemyPokemonTexture,
@@ -490,7 +532,7 @@ public class BattleScreen extends AbstractScreen {
 			}
 			
 			batch.end();
-		}
+		
 	}
 	@Override
 	public void resize(int width, int height) {

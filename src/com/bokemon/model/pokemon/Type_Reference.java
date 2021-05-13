@@ -3,12 +3,14 @@ import java.util.HashMap;
 
 import org.json.JSONArray;
 
+import com.badlogic.gdx.utils.Json;
 import com.bokemon.Bokemon;
 import com.bokemon.util.PokeApi;
 
 public class Type_Reference {
 	public HashMap<String, HashMap<String, JSONArray>> types = new HashMap<String, HashMap<String, JSONArray>>();
 	
+	private Json json = new Json();
 	private PokeApi api;
 	private String[] typeNames = {"bug", "dark", "dragon", "electric", "fairy", "flying", "fighting", "fire", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"};
 
@@ -17,7 +19,7 @@ public class Type_Reference {
 			api = new PokeApi("type/" + type); //GENERAL
 			types.put(type.toUpperCase(), PokeApi.getDamageRelations(api.responseContent.toString()));
 		}
-		Bokemon.pokemon_data.put(types);
+		Bokemon.pokemon_data.putString("types", json.toJson(types));
 		Bokemon.pokemon_data.flush();
 //		api = new PokeApi("type/dark"); //GENERAL
 //		types.put("DARK", PokeApi.getDamageRelations(api.responseContent.toString()));

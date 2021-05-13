@@ -3,7 +3,7 @@ package com.bokemon.model.world;
 public enum AVAILABLE_LEVELS {
 	
 	
-	PALLET_TOWN(5, 9),
+	PALLET_TOWN(60, 60),
 	;
 	
 	private int min, max;

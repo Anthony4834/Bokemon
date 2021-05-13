@@ -1,14 +1,13 @@
 package com.bokemon.screen;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input.Keys;
-import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.Action;
 import com.bokemon.Bokemon;
 import com.bokemon.Settings;
 import com.bokemon.controller.PlayerController;
@@ -16,37 +15,64 @@ import com.bokemon.model.Actor;
 import com.bokemon.model.Camera;
 import com.bokemon.model.building.Door;
 import com.bokemon.model.building.House;
+import com.bokemon.model.world.AVAILABLE_POKEMON;
 import com.bokemon.model.world.TERRAIN;
 import com.bokemon.model.world.TallGrassPatch;
 import com.bokemon.model.world.TileMap;
+import com.bokemon.tween.SpriteAccessor;
 import com.bokemon.util.AnimationSet;
+import com.bokemon.util.Music_Reference;
+
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenManager;
 
 public class GameScreen extends AbstractScreen {
 	private Actor player;
+	private Sprite splash;
 	private House house1;
 	private Door house1Door;
 	private TileMap map;
 	@SuppressWarnings("unused")
 	private TallGrassPatch tallGrassPatch;
-	private PlayerController controller;
+	public PlayerController controller;
 	private Camera camera;
+	private Music music;
+	
 	public  SpriteBatch batch;
 	private Texture grass1;
 	private Texture grass2;
 	private Texture tallGrassTexture;
 	private Texture houseTexture1;
 	private Texture doorTexture1;
+	private Texture splashTexture;
+	
+	private TweenManager tweenManager;
+	
+	public Boolean isTransitioning = false;
+	private float transitionTimer;
+	private double battleInfo1;
+	private AVAILABLE_POKEMON battleInfo2;
 
 	public GameScreen(Bokemon app) {
 		super(app);
+		
+		Bokemon.musicRef.playMusic(Bokemon.musicRef.pallet_town);
 		
 		grass1 = new Texture("res/graphics_unpacked/tiles/grass1.png");
 		grass2 = new Texture("res/graphics_unpacked/tiles/grass2.png");
 		tallGrassTexture = new Texture("res/graphics_unpacked/tiles/tall_grass.png");
 		houseTexture1 = new Texture("res/graphics_unpacked/tiles/small_house.png");
 		doorTexture1 = new Texture("res/graphics_unpacked/tiles/woodenDoor_0.png");
+		splashTexture = new Texture("res/graphics_unpacked/ui/black.png");
 		
 		batch = new SpriteBatch();
+		tweenManager = new TweenManager();
+
+		splash = new Sprite(splashTexture);
+		Tween.registerAccessor(Sprite.class, new SpriteAccessor());
+		splash.setSize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		splash.setCenterX(Settings.WINDOW_X / 2);
+		splash.setCenterY(Settings.WINDOW_Y / 2);
 		
 		TextureAtlas atlas = app.getAssetManager().get("res/graphics_packed/tiles/tile_textures.atlas", TextureAtlas.class);	
 		AnimationSet animations = new AnimationSet(
@@ -68,10 +94,9 @@ public class GameScreen extends AbstractScreen {
 		
 		player = new Actor(map, Bokemon.prefs.getInteger("playerX", 2), Bokemon.prefs.getInteger("playerY", 10), animations, this);
 		
-		controller = new PlayerController(player);
+		controller = new PlayerController(player, this);
 		
 		camera = new Camera();
-		
 		
 	}
 
@@ -81,6 +106,7 @@ public class GameScreen extends AbstractScreen {
 		grass1.dispose();
 		grass2.dispose();
 		houseTexture1.dispose();
+		Music_Reference.current.dispose();
 	}
 
 	@Override
@@ -94,10 +120,26 @@ public class GameScreen extends AbstractScreen {
 	}
 	@Override
 	public void render(float delta) {
+		tweenManager.update(delta);
+		
 		controller.update(delta);
 		
 		player.update(delta);
 		camera.update(player.getWorldX()+0.5f, player.getWorldY()+0.5f);
+		
+		if(isTransitioning) {
+			controller.freeze();
+			System.out.println("TRANSITION");
+			transitionTimer += 1;
+			if(transitionTimer == 80) {
+				startTransition();
+			}
+			if(transitionTimer == 120) {
+				System.out.println("DONE");
+				player.initBattle(battleInfo1, battleInfo2);
+				isTransitioning = false;
+			}
+		}
 		
 		batch.begin();
 		
@@ -125,6 +167,7 @@ public class GameScreen extends AbstractScreen {
 							Settings.SCALED_TILE_SIZE);
 				}
 			}
+			splash.draw(batch);
 		}
 		
 		batch.draw(player.getSprite(), 
@@ -160,6 +203,16 @@ public class GameScreen extends AbstractScreen {
 	@Override
 	public void show() {
 		Gdx.input.setInputProcessor(controller);
+		Tween.set(splash, SpriteAccessor.ALPHA).target(0).start(tweenManager);
+				
+	}
+	public void initBattle(double n, AVAILABLE_POKEMON a) {
+		isTransitioning = true;
+		this.battleInfo1 = n;
+		this.battleInfo2 = a;
+	}
+	public void startTransition() {
+		Tween.to(splash, SpriteAccessor.ALPHA, (float) 0.4).target(1).start(tweenManager);
 	}
 
 }

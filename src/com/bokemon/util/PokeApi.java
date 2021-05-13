@@ -78,7 +78,8 @@ public class PokeApi {
 	
 	public static HashMap<String, String> getStats(String responseBody) {
 		JSONObject result = new JSONObject(responseBody);
-		JSONArray statsObjs = new JSONArray(result.getJSONArray("stats"));
+		JSONArray statsObjs = result.getJSONArray("stats");
+		JSONArray types = result.getJSONArray("types");
 		
 		HashMap<String, String> pokemon = new HashMap<String, String>();
 		
@@ -92,6 +93,7 @@ public class PokeApi {
 		pokemon.put("BASE_SPDEF", String.valueOf(statsObjs.getJSONObject(4).getInt("base_stat")));
 		pokemon.put("BASE_SPD", String.valueOf(statsObjs.getJSONObject(5).getInt("base_stat")));
 		pokemon.put("SIZE", shrinkList.contains(pokemon.get("ORIGIN_NAME")) ? "7" : "9");
+		pokemon.put("TYPES", json.toJson(types));
 		
 		return pokemon;
 	}
@@ -131,6 +133,38 @@ public class PokeApi {
 		for(int i=0; i<pokeArray.length(); i++) {
 			output.add(pokeArray.getJSONObject(i).getJSONObject("pokemon_species").getString("name"));
 		}
+		
+		return output;
+		
+	}
+	
+	public static ArrayList<String> getAllMoveNames(String responseBody) {
+		ArrayList<String> output = new ArrayList<String>();
+		
+		JSONObject result = new JSONObject(responseBody);
+		JSONArray moves = result.getJSONArray("results");
+		
+		for(int i = 0; i < moves.length(); i++) {
+			output.add(moves.getJSONObject(i).getString("name"));
+		}
+		
+		return output;
+	}
+	
+	public static HashMap<String, String> getMoveInfo(String responseBody) {
+		HashMap<String, String> output = new HashMap<String, String>();
+		
+		JSONObject result = new JSONObject(responseBody);
+		
+		output.put("ACCURACY", String.valueOf(result.get("accuracy")));
+		output.put("CATEGORY", String.valueOf(result.getJSONObject("damage_class").get("name")));
+		output.put("POWER", String.valueOf(result.get("power")));
+		output.put("TYPE", String.valueOf(result.getJSONObject("type").get("name")));
+		output.put("MAX_PP", String.valueOf(result.get("pp")));
+		output.put("MAKES_CONTACT", String.valueOf(output.get("CATEGORY").equals("physical")));
+		output.put("PRIORITY", String.valueOf(result.getInt("priority")));
+		output.put("EFFECT", result.getJSONArray("effect_entries").length() > 0 ? String.valueOf(result.getJSONArray("effect_entries").getJSONObject(0).get("short_effect")) : "null");
+		output.put("EFFECT_CHANCE", String.valueOf(result.get("effect_chance")));
 		
 		return output;
 		

@@ -8,8 +8,10 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.bokemon.model.pokemon.Pokemon_Reference2;
 import com.bokemon.model.pokemon.Type_Reference;
+import com.bokemon.model.pokemon.move.Move_Reference;
 import com.bokemon.screen.BattleScreen;
 import com.bokemon.screen.GameScreen;
+import com.bokemon.util.Music_Reference;
 import com.bokemon.util.transitions.BattleBlinkTransition;
 import com.bokemon.util.transitions.BattleBlinkTransitionAccessor;
 
@@ -28,6 +30,8 @@ public class Bokemon extends Game{
 	public static Preferences pokemon_data;
 	public static Pokemon_Reference2 ref2;
 	public static Type_Reference typeRef;
+	public static Music_Reference musicRef;
+	public static Move_Reference moveRef;
 
 	@Override
 	public void create() {
@@ -42,16 +46,18 @@ public class Bokemon extends Game{
 		
 		prefs = Gdx.app.getPreferences("State");
 		
-//		pokemon_data = Gdx.app.getPreferences("pokemon_data"); // ***ONLY NEEDED WHEN UPDATING
-//		if(pokemon_data.getString( "pokemon", null) == null) {
-//			ref2  = new Pokemon_Reference2();					
-//			//typeRef  = new Type_Reference();
-//		}
+		//pokemon_data = Gdx.app.getPreferences("pokemon_data"); // ***ONLY NEEDED WHEN UPDATING
+		//moveRef = new Move_Reference();
+//		ref2  = new Pokemon_Reference2();
+//		typeRef  = new Type_Reference();	
 //		System.out.println(pokemon_data.getString("pokemon").length());
+		
+		musicRef = new Music_Reference();
 		
 		screen = new GameScreen(this);
 		
 		this.setScreen(screen);
+		
 	}
 	@Override
 	public void render() {
@@ -72,6 +78,9 @@ public class Bokemon extends Game{
 	
 	public AssetManager getAssetManager() {
 		return assetManager;
+	}
+	public TweenManager getTweenManager() {
+		return tweenManager;
 	}
 
 }

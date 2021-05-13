@@ -4,18 +4,26 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 import com.bokemon.model.Actor;
 import com.bokemon.model.DIRECTION;
+import com.bokemon.screen.GameScreen;
 
 public class PlayerController extends InputAdapter {
 	
 	private Actor player;
+	private GameScreen screen;
+	private Boolean frozen = false;
+	
 	private boolean up, down, left, right;
 	
-	public PlayerController(Actor p) {
+	public PlayerController(Actor p, GameScreen s) {
 		this.player = p;
+		this.screen = s;
 	}
 
 	@Override
 	public boolean keyDown(int keycode) {
+		if(this.isFrozen()) {
+			return false;
+		}
 		if(keycode == Keys.W) {
 			up = true;
 		}
@@ -33,6 +41,9 @@ public class PlayerController extends InputAdapter {
 	}
 	@Override
 	public boolean keyUp(int keycode) {
+		if(this.isFrozen()) {
+			return false;
+		}
 		if(keycode == Keys.W) {
 			up = false;
 		}
@@ -49,6 +60,9 @@ public class PlayerController extends InputAdapter {
 		return false;
 	}
 	public void update(float delta) {
+		if(this.isFrozen()) {
+			return;
+		}
 		if(up) {
 			player.move(DIRECTION.NORTH);
 			return;
@@ -66,7 +80,12 @@ public class PlayerController extends InputAdapter {
 			return;
 		}
 	}
-
+	public void freeze() {
+		this.frozen = true;
+	}
+	public Boolean isFrozen() {
+		return this.frozen;
+	}
 	public Actor getPlayer() {
 		return player;
 	}

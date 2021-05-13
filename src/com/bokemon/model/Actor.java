@@ -22,6 +22,8 @@ public class Actor {
 	private int y;
 	private DIRECTION facing;
 	
+	private Boolean startingBattle = false;
+	
 	private float worldX, worldY;
 	private int srcX, srcY;
 	private int destX, destY;
@@ -104,20 +106,17 @@ public class Actor {
 		if(tile.getTerrain() == TERRAIN.TALL_GRASS) {
 			double num = Math.random();
 			if(num > 0.85) {
+				this.screen.controller.freeze();
+				Bokemon.musicRef.playMusic(Bokemon.musicRef.battle);
 				double num2 = Math.random();
-				try {
-					TimeUnit.MILLISECONDS.sleep(500);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				initBattle(num2, AVAILABLE_POKEMON.PALLET_TOWN);
+				this.screen.initBattle(num2, AVAILABLE_POKEMON.PALLET_TOWN);
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	private Pokemon initBattle(double num, AVAILABLE_POKEMON avail) {
+	public Pokemon initBattle(double num, AVAILABLE_POKEMON avail) {
 		System.out.println(Bokemon.apiCalls);
 		Bokemon.prefs.putInteger("playerX", this.getX());
 		Bokemon.prefs.putInteger("playerY", this.getY());

@@ -1,6 +1,7 @@
 package com.bokemon.screen;
 
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.bokemon.Bokemon;
 
 public abstract class AbstractScreen implements Screen {

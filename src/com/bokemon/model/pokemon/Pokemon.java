@@ -1,5 +1,10 @@
 package com.bokemon.model.pokemon;
 
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.Json.Serializable;
@@ -21,11 +26,11 @@ public class Pokemon implements Serializable {
 	private int level;
 	private int xp;
 	private RARITY rarity;
-	private TYPE type;
+	private JSONArray types;
 	private TextureRegion texture;
 	private float size;
 	
-	public Pokemon(String n, int id, int hp, int atk, int def, int spAtk, int spDef, int spd, int captureRate, int size) {
+	public Pokemon(String n, int id, int hp, int atk, int def, int spAtk, int spDef, int spd, JSONArray types, int captureRate, int size) {
 		this.name = n;
 		this.id = id;
 		this.maxHp = hp;
@@ -35,6 +40,7 @@ public class Pokemon implements Serializable {
 		this.spAtk = spAtk;
 		this.spDef = spDef;
 		this.spd = spd;
+		this.types = types;
 		this.captureRate = captureRate;
 		this.size = size*Settings.SCALED_TILE_SIZE;
 		this.gender = Math.random() >= 0.5 ? "male" : "female";
@@ -49,7 +55,7 @@ public class Pokemon implements Serializable {
 		this.spd = (int) (((1+(2*this.spd)+(1))*this.level)/100)+5;
 	}
 	public void printLevels() {
-		System.out.println(String.format("HP [%s] \n ATK [%s] \n DEF [%s] \n SPATK [%s] \n SPDEF [%s] \n SPD [%s]", this.maxHp, this.atk, this.def, this.spAtk, this.spDef, this.spd));
+		System.out.println(String.format(" HP [%s] \n ATK [%s] \n DEF [%s] \n SPATK [%s] \n SPDEF [%s] \n SPD [%s]", this.maxHp, this.atk, this.def, this.spAtk, this.spDef, this.spd));
 	}
 	public String getName() {
 		return name;
@@ -124,6 +130,43 @@ public class Pokemon implements Serializable {
 	}
 	public void setCaptureRate(int captureRate) {
 		this.captureRate = captureRate;
+	}
+	public Boolean isType(String type) {
+		for(int i = 0; i < types.length(); i++) {
+			if(types.getJSONObject(i).getJSONObject("type").getString("name").toUpperCase().equals(type.toUpperCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public JSONArray getTypes() {
+		return types;
+	}
+	public ArrayList<String> getWeaknesses(JSONObject ref,  JSONArray toEval) {
+		ArrayList<String> output = new ArrayList<String>();
+		
+		for(int i = 0; i < toEval.length(); i++) {
+			String type = toEval.getJSONObject(i).getJSONObject("type").getString("name").toUpperCase();
+			JSONArray weaknesses = ref.getJSONObject(type).getJSONObject("DOUBLE_FROM").getJSONArray("myArrayList");
+			for(int e = 0; e < weaknesses.length(); e++) {
+				output.add(weaknesses.getJSONObject(e).getJSONObject("map").getJSONObject("name").getString("value").toUpperCase());
+			}
+		}
+		
+		return output;
+	}
+	public ArrayList<String> getStrengths(JSONObject ref,  JSONArray toEval) {
+		ArrayList<String> output = new ArrayList<String>();
+		
+		for(int i = 0; i < toEval.length(); i++) {
+			String type = toEval.getJSONObject(i).getJSONObject("type").getString("name").toUpperCase();
+			JSONArray strengths = ref.getJSONObject(type).getJSONObject("HALF_FROM").getJSONArray("myArrayList");
+			for(int e = 0; e < strengths.length(); e++) {
+				output.add(strengths.getJSONObject(e).getJSONObject("map").getJSONObject("name").getString("value").toUpperCase());
+			}
+		}
+		
+		return output;
 	}
 	@Override
 	public void read(Json arg0, JsonValue arg1) {

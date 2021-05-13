@@ -74,7 +74,7 @@ public class BattleController extends InputAdapter {
 			if(screen.state == BATTLE_STATE.QUESTION) {
 				switch(screen.selected) {
 					case ATTACK:
-						screen.attackPokemon();
+						screen.attackPokemon("NORMAL");
 						break;
 					case RUN:
 						screen.updateDialog(BATTLE_STATE.RUN_AWAY);
@@ -100,7 +100,7 @@ public class BattleController extends InputAdapter {
 						screen.switchPokemon();
 						break;
 					case ATTACK:
-						screen.attackPokemon();
+						screen.attackPokemon("NORMAL");
 						break;
 					case CAPTURE:
 						screen.capturePokemon();
