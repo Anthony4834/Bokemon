@@ -1,82 +1,89 @@
 
 ui_textures.png
-size: 1024,512
+size: 1024,1024
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
 arrow
   rotate: false
-  xy: 264, 135
+  xy: 264, 93
   size: 6, 10
   orig: 6, 10
   offset: 0, 0
   index: -1
 background_hpbar
   rotate: false
-  xy: 381, 166
+  xy: 381, 124
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
 bar_cyan
   rotate: false
-  xy: 264, 169
+  xy: 2, 17
   size: 115, 20
   orig: 115, 20
   offset: 0, 0
   index: -1
 bar_green
   rotate: false
-  xy: 2, 17
+  xy: 264, 105
   size: 115, 20
   orig: 115, 20
   offset: 0, 0
   index: -1
 bar_red
   rotate: false
-  xy: 264, 147
+  xy: 454, 493
   size: 115, 20
   orig: 115, 20
   offset: 0, 0
   index: -1
 bar_yellow
   rotate: false
-  xy: 381, 169
+  xy: 716, 557
   size: 115, 20
   orig: 115, 20
   offset: 0, 0
   index: -1
 battleinfobox_enemy
   rotate: false
-  xy: 2, 39
+  xy: 454, 515
   size: 260, 62
   orig: 260, 62
   offset: 0, 0
   index: -1
 battleinfobox_friendly
   rotate: false
-  xy: 2, 103
+  xy: 2, 39
   size: 260, 86
   orig: 260, 86
   offset: 0, 0
   index: -1
+black
+  rotate: false
+  xy: 2, 127
+  size: 450, 450
+  orig: 450, 450
+  offset: 0, 0
+  index: -1
 dialoguebox
   rotate: false
-  xy: 2, 191
+  xy: 2, 579
   size: 960, 213
   orig: 960, 213
   offset: 0, 0
   index: -1
 green
   rotate: false
-  xy: 498, 188
+  xy: 454, 490
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
 hpbar_bar
   rotate: false
-  xy: 964, 397
+  xy: 964, 785
   size: 51, 7
   orig: 51, 7
   offset: 0, 0
@@ -97,15 +104,147 @@ optionbox
   index: -1
 red
   rotate: false
-  xy: 964, 394
+  xy: 571, 512
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
 yellow
   rotate: false
-  xy: 1017, 403
+  xy: 716, 554
   size: 1, 1
   orig: 1, 1
+  offset: 0, 0
+  index: -1
+
+ui_textures2.png
+size: 1024,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+type_icons/bug
+  rotate: false
+  xy: 2, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/dark
+  rotate: false
+  xy: 2, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/dragon
+  rotate: false
+  xy: 106, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/electric
+  rotate: false
+  xy: 106, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/fairy
+  rotate: false
+  xy: 210, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/fighting
+  rotate: false
+  xy: 210, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/fire
+  rotate: false
+  xy: 314, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/flying
+  rotate: false
+  xy: 314, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/ghost
+  rotate: false
+  xy: 418, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/grass
+  rotate: false
+  xy: 418, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/ground
+  rotate: false
+  xy: 522, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/ice
+  rotate: false
+  xy: 522, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/normal
+  rotate: false
+  xy: 626, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/poison
+  rotate: false
+  xy: 626, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/psychic
+  rotate: false
+  xy: 730, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/rock
+  rotate: false
+  xy: 730, 2
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/steel
+  rotate: false
+  xy: 834, 106
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+type_icons/water
+  rotate: false
+  xy: 834, 2
+  size: 102, 102
+  orig: 102, 102
   offset: 0, 0
   index: -1

@@ -99,7 +99,7 @@ public class BattleScreen extends AbstractScreen {
 		if(isWild) {
 			enemy.setLevel( (int) (Math.random() * (AVAILABLE_LEVELS.PALLET_TOWN.getMax() - AVAILABLE_LEVELS.PALLET_TOWN.getMin()) ) + AVAILABLE_LEVELS.PALLET_TOWN.getMin() );
 		}
-		enemy.setLevel(80);
+		enemy.setLevel(90);
 		enemy.updateValues();
 		enemy.setHp(enemy.getMaxHp());
 		
@@ -261,7 +261,7 @@ public class BattleScreen extends AbstractScreen {
 		Move move = activePokemon.getMoveSet().get(selected.getNum() - 1);
 		if(this.state == BATTLE_STATE.ATTACK) {
 			move.setPp(move.getPp() - 1);
-			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * move.getPower() * (activePokemon.getAtk() / enemy.getDef())) / 50) + 2;
+			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * move.getPower() * (move.getCategory().equals("physical") ? (activePokemon.getAtk() / enemy.getDef()) : (activePokemon.getSpAtk()) / enemy.getSpDef() )) / 50) + 2;
 			double rand = Math.random() * (1 - 0.85) + 0.85;
 			int dPwr = (int) (attackPower * rand);
 			if( ( enemy.isType("flying") && move.getType().equals(TYPE.GROUND) ) || ( enemy.isType("ghost") && move.getType().equals(TYPE.NORMAL) ) || ( enemy.isType("normal") && move.getType().equals(TYPE.GHOST) )) {
@@ -534,9 +534,14 @@ public class BattleScreen extends AbstractScreen {
 					29*Settings.SCALED_TILE_SIZE, 
 					(float) 5.5*Settings.SCALED_TILE_SIZE);
 				sub2.draw(batch, 
-					String.format("TYPE: %s", activePokemon.getMoveSet().size() >= selected.getNum() ?  activePokemon.getMoveSet().get(selected.getNum() - 1).getType().toString() : null), 
+					String.format("TYPE:"), 
 					29*Settings.SCALED_TILE_SIZE, 
 					(float) 3.5*Settings.SCALED_TILE_SIZE);
+				batch.draw(uiAtlas.findRegion("type_icons/" + activePokemon.getMoveSet().get(selected.getNum() - 1).getType().toString().toLowerCase()),
+						(float) 32.2*Settings.SCALED_TILE_SIZE,
+						(float) 2.42*Settings.SCALED_TILE_SIZE,
+						60,
+						60);
 			}
 			
 			batch.end();

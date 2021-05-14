@@ -148,6 +148,24 @@ public class Pokemon implements Serializable {
 	public void setCaptureRate(int captureRate) {
 		this.captureRate = captureRate;
 	}
+	public int getSpAtk() {
+		return spAtk;
+	}
+	public void setSpAtk(int spAtk) {
+		this.spAtk = spAtk;
+	}
+	public int getSpDef() {
+		return spDef;
+	}
+	public void setSpDef(int spDef) {
+		this.spDef = spDef;
+	}
+	public int getSpd() {
+		return spd;
+	}
+	public void setSpd(int spd) {
+		this.spd = spd;
+	}
 	public Boolean isType(String type) {
 		for(int i = 0; i < types.length(); i++) {
 			if(types.getJSONObject(i).getJSONObject("type").getString("name").toUpperCase().equals(type.toUpperCase())) {
