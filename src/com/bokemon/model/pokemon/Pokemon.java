@@ -10,6 +10,7 @@ import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.Json.Serializable;
 import com.badlogic.gdx.utils.JsonValue;
 import com.bokemon.Settings;
+import com.bokemon.model.pokemon.move.Move;
 
 public class Pokemon implements Serializable {
 	private String name;
@@ -29,6 +30,8 @@ public class Pokemon implements Serializable {
 	private JSONArray types;
 	private TextureRegion texture;
 	private float size;
+	private Json json = new Json();
+	private ArrayList<Move> moveSet;
 	
 	public Pokemon(String n, int id, int hp, int atk, int def, int spAtk, int spDef, int spd, JSONArray types, int captureRate, int size) {
 		this.name = n;
@@ -45,6 +48,20 @@ public class Pokemon implements Serializable {
 		this.size = size*Settings.SCALED_TILE_SIZE;
 		this.gender = Math.random() >= 0.5 ? "male" : "female";
 		//this.texture = sprites.items.get(n.toUpperCase());
+	}
+	public Pokemon(JSONObject info) {
+		name = info.getJSONObject("ORIGIN_NAME").get("value").toString();
+		id = Integer.valueOf(info.getJSONObject("ID").get("value").toString());
+		maxHp = Integer.valueOf(info.getJSONObject("BASE_HP").get("value").toString()); 
+		atk = Integer.valueOf(info.getJSONObject("BASE_ATK").get("value").toString()); 
+		def = Integer.valueOf(info.getJSONObject("BASE_DEF").get("value").toString());
+		spAtk = Integer.valueOf(info.getJSONObject("BASE_SPATK").get("value").toString());
+		spDef = Integer.valueOf(info.getJSONObject("BASE_SPDEF").get("value").toString());
+		spd = Integer.valueOf(info.getJSONObject("BASE_SPD").get("value").toString());
+		types = json.fromJson(JSONArray.class, info.getJSONObject("TYPES").getString("value"));
+		captureRate = Integer.valueOf(info.getJSONObject("CAPTURE_RATE").get("value").toString());
+		size = Settings.SCALED_TILE_SIZE * Integer.valueOf(info.getJSONObject("SIZE").get("value").toString());
+		gender = Math.random() >= 0.5 ? "male" : "female";
 	}
 	public void updateValues() {
 		this.maxHp = (int) (((1+(2*this.maxHp)+1+100)*this.level)/100)+10;
@@ -143,7 +160,7 @@ public class Pokemon implements Serializable {
 		return types;
 	}
 	public ArrayList<String> getWeaknesses(JSONObject ref,  JSONArray toEval) {
-		ArrayList<String> output = new ArrayList<String>();
+		ArrayList<String> output = new ArrayList<String>(); 
 		
 		for(int i = 0; i < toEval.length(); i++) {
 			String type = toEval.getJSONObject(i).getJSONObject("type").getString("name").toUpperCase();
@@ -159,6 +176,9 @@ public class Pokemon implements Serializable {
 		ArrayList<String> output = new ArrayList<String>();
 		
 		for(int i = 0; i < toEval.length(); i++) {
+			if(toEval.getJSONObject(i).getJSONObject("type").getString("name").equals("normal")) {
+				continue;
+			}
 			String type = toEval.getJSONObject(i).getJSONObject("type").getString("name").toUpperCase();
 			JSONArray strengths = ref.getJSONObject(type).getJSONObject("HALF_FROM").getJSONArray("myArrayList");
 			for(int e = 0; e < strengths.length(); e++) {
@@ -167,6 +187,12 @@ public class Pokemon implements Serializable {
 		}
 		
 		return output;
+	}
+	public ArrayList<Move> getMoveSet() {
+		return moveSet;
+	}
+	public void setMoveSet(ArrayList<Move> moveSet) {
+		this.moveSet = moveSet;
 	}
 	@Override
 	public void read(Json arg0, JsonValue arg1) {

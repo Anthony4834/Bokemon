@@ -2,7 +2,6 @@ package com.bokemon.screen;
 
 import java.util.ArrayList;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.badlogic.gdx.Gdx;
@@ -16,6 +15,7 @@ import com.badlogic.gdx.utils.Json;
 import com.bokemon.Bokemon;
 import com.bokemon.Settings;
 import com.bokemon.battle.BATTLE_STATE;
+import com.bokemon.battle.BattleProgressor;
 import com.bokemon.battle.HealthBar;
 import com.bokemon.battle.Platform;
 import com.bokemon.battle.SELECTED;
@@ -25,6 +25,8 @@ import com.bokemon.model.Camera;
 import com.bokemon.model.pokemon.Capture_Calculator;
 import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.model.pokemon.Pokemon_Sprites;
+import com.bokemon.model.pokemon.TYPE;
+import com.bokemon.model.pokemon.move.Move;
 import com.bokemon.model.world.AVAILABLE_LEVELS;
 import com.bokemon.util.Music_Reference;
 import com.bokemon.util.Pokemon_Data;
@@ -35,32 +37,42 @@ public class BattleScreen extends AbstractScreen {
 	public TextureAtlas atlas;
 	private TextureAtlas uiAtlas;
 	private BattleController controller;
+	private Json json = new Json();
+	
 	private JSONObject ref;
 	private JSONObject typeRef;
-	private Json json = new Json();
+	private JSONObject moveRef;
+	
 	private BitmapFont main = new BitmapFont();
 	private BitmapFont sub = new BitmapFont();
+	private BitmapFont sub2 = new BitmapFont();
 	private BitmapFont name = new BitmapFont();
-	private String currentDialog = "";
-	public BATTLE_STATE state;
-	public SELECTED selected;
+	public String currentDialog = "";
 	public boolean hpChange = false;
 	public boolean enemyHpChange = false;
 	private Preferences pD = Bokemon.pokemon_data;
 	
+	public BATTLE_STATE state;
+	public SELECTED selected;
+	private BattleProgressor progressor;
+	
 	public Pokemon_Sprites sprites = new Pokemon_Sprites();
 	private ArrayList<Pokemon> party;
-	private Pokemon activePokemon;
+	public Pokemon activePokemon;
 	private int activePokemonNum = 0;
-	private Pokemon enemy;
+	public Pokemon enemy;
 	private TextureRegion background;
 	private TextureRegion allyPokemonTexture;
 	private TextureRegion enemyPokemonTexture;
 	
+	private TYPE type;
 	private ArrayList<String> enemyWeaknesses;
 	private ArrayList<String> enemyStrengths;
 	private ArrayList<String> allyWeaknesses;
 	private ArrayList<String> allyStrengths;
+	
+	private ArrayList<Move> allyMoveSet;
+	private ArrayList<Move> enemyMoveSet;
 	
 	private Platform enemyPlatform;
 	private Platform allyPlatform;
@@ -77,27 +89,17 @@ public class BattleScreen extends AbstractScreen {
 	
 	public BattleScreen(Bokemon app, String enemyName, boolean isWild) {
 		super(app);
+		
 		ref = Pokemon_Data.get("pokemon");
 		typeRef = Pokemon_Data.get("types");
+		moveRef = Pokemon_Data.get("moves");
 		
-		
-		
-		JSONObject enemyInfo = ref.getJSONObject("HAUNTER");
-		this.enemy = new Pokemon(enemyInfo.getJSONObject("ORIGIN_NAME").get("value").toString(), 
-				Integer.valueOf(enemyInfo.getJSONObject("ID").get("value").toString()),
-				Integer.valueOf(enemyInfo.getJSONObject("BASE_HP").get("value").toString()), 
-				Integer.valueOf(enemyInfo.getJSONObject("BASE_ATK").get("value").toString()), 
-				Integer.valueOf(enemyInfo.getJSONObject("BASE_DEF").get("value").toString()),
-				Integer.valueOf(enemyInfo.getJSONObject("BASE_SPATK").get("value").toString()),
-				Integer.valueOf(enemyInfo.getJSONObject("BASE_SPDEF").get("value").toString()),
-				Integer.valueOf(enemyInfo.getJSONObject("BASE_SPD").get("value").toString()),
-				json.fromJson(JSONArray.class, enemyInfo.getJSONObject("TYPES").getString("value")),
-				Integer.valueOf(enemyInfo.getJSONObject("CAPTURE_RATE").get("value").toString()),
-				Integer.valueOf(enemyInfo.getJSONObject("SIZE").get("value").toString()));
+		this.enemy = new Pokemon(ref.getJSONObject("GENGAR"));
 
 		if(isWild) {
 			enemy.setLevel( (int) (Math.random() * (AVAILABLE_LEVELS.PALLET_TOWN.getMax() - AVAILABLE_LEVELS.PALLET_TOWN.getMin()) ) + AVAILABLE_LEVELS.PALLET_TOWN.getMin() );
 		}
+		enemy.setLevel(80);
 		enemy.updateValues();
 		enemy.setHp(enemy.getMaxHp());
 		
@@ -113,17 +115,13 @@ public class BattleScreen extends AbstractScreen {
 		allyWeaknesses = activePokemon.getWeaknesses(typeRef, activePokemon.getTypes());
 		allyStrengths = activePokemon.getStrengths(typeRef, activePokemon.getTypes());
 		
-		System.out.println(enemyWeaknesses);
-		System.out.println(enemyStrengths);
-		System.out.println(allyWeaknesses);
-		System.out.println(allyStrengths);
-
-		
 		allyPokemonTexture = atlas.findRegion("pokemon_back_sprites/" + activePokemon.getId());
 		enemyPokemonTexture = atlas.findRegion("pokemon_sprites/" + enemy.getId());
 		
 		this.state = BATTLE_STATE.INIT;
-		this.selected = SELECTED.ATTACK;
+		this.selected = SELECTED.OPTION_1;
+		selected.constructRelations();
+		this.progressor = new BattleProgressor(this);
 
 		
 		batch = new SpriteBatch();
@@ -150,6 +148,8 @@ public class BattleScreen extends AbstractScreen {
 		main.setColor(Color.DARK_GRAY);
 		sub.getData().setScale(4.5f);
 		sub.setColor(Color.DARK_GRAY);
+		sub2.getData().setScale(3.5f);
+		sub2.setColor(Color.DARK_GRAY);
 		name.getData().setScale(enemy.getName().length() < 12 ? 4f : 3f);
 		name.setColor(Color.DARK_GRAY);
 		
@@ -162,28 +162,39 @@ public class BattleScreen extends AbstractScreen {
 			String name = Bokemon.prefs.getString(String.format("poke%s", i), null);
 			if(name != null) {
 				System.out.println(name);
-				JSONObject info = ref.getJSONObject(name);
-				Pokemon toAdd = new Pokemon(info.getJSONObject("ORIGIN_NAME").get("value").toString(),
-						Integer.valueOf(info.getJSONObject("ID").get("value").toString()),
-						Integer.valueOf(info.getJSONObject("BASE_HP").get("value").toString()), 
-						Integer.valueOf(info.getJSONObject("BASE_ATK").get("value").toString()), 
-						Integer.valueOf(info.getJSONObject("BASE_DEF").get("value").toString()),
-						Integer.valueOf(info.getJSONObject("BASE_SPATK").get("value").toString()),
-						Integer.valueOf(info.getJSONObject("BASE_SPDEF").get("value").toString()),
-						Integer.valueOf(info.getJSONObject("BASE_SPD").get("value").toString()),
-						json.fromJson(JSONArray.class, info.getJSONObject("TYPES").getString("value")),
-						Integer.valueOf(info.getJSONObject("CAPTURE_RATE").get("value").toString()),
-						Integer.valueOf(info.getJSONObject("SIZE").get("value").toString()));
 				
+				Pokemon toAdd = new Pokemon(ref.getJSONObject(name));
+				
+				toAdd.setMoveSet(buildMoveSet(i));
 				toAdd.setLevel(Integer.valueOf(Bokemon.prefs.getString(String.format("poke%s_lv", i), "4")));
 				toAdd.updateValues();
 				toAdd.setHp(Integer.valueOf(Bokemon.prefs.getString(String.format("poke%s_hp", i), String.valueOf(toAdd.getMaxHp()))));
-				toAdd.printLevels();
+				//toAdd.printLevels();
 				output.add(toAdd);
 			}
 		}
 		return output;
 	}
+	private ArrayList<Move> buildMoveSet(int pokemon) {
+		ArrayList<Move> output = new ArrayList<Move>();
+		
+		for(int i = 1; i <= 4; i++) {
+			String moveName = Bokemon.prefs.getString(String.format("poke%s_mv%s", pokemon, i), null);
+			if(moveName == null) {
+				continue;
+			}
+			System.out.println(" " + moveName);
+			Move move = new Move(moveRef.getJSONObject(moveName));
+			move.setPp(move.getMax_pp());
+			
+			output.add(move);
+		}
+		return output;
+	}
+	public void progressBattle(SELECTED selected) {
+		progressor.update(selected);
+	}
+	
 	public void healthAnim() {
 		float hpBarDelta = Gdx.graphics.getDeltaTime();
 		float speed = 180;
@@ -233,7 +244,7 @@ public class BattleScreen extends AbstractScreen {
 			if(dSizeX <= HealthBar.max * (enemy.getHpPercentage() / 100) || dSizeX < 0) {
 				enemyHealthBar.setSizeX((float) (HealthBar.max * (enemy.getHpPercentage() / 100)) );
 				this.enemyHpChange = false;
-				updateDialog(enemy.getHp() > 0 ? BATTLE_STATE.QUESTION : BATTLE_STATE.FAINT_ENEMY);
+				progressor.updateDialog(enemy.getHp() > 0 ? BATTLE_STATE.QUESTION : BATTLE_STATE.FAINT_ENEMY);
 			} else {
 				enemyHealthBar.setSizeX(dSizeX);
 			}
@@ -246,62 +257,22 @@ public class BattleScreen extends AbstractScreen {
 		this.hpChange = true;
 		healthAnim();
 	}
-	public void updateDialog(BATTLE_STATE to) {
-		switch(to) {
-			case QUESTION:
-				this.currentDialog = "What should \n" + this.activePokemon.getName().toUpperCase() + " do?";
-				this.state = BATTLE_STATE.QUESTION;
-				break;
-			case ATTACK:
-				this.currentDialog = this.activePokemon.getName().toUpperCase() + " used \nTACKLE";
-				this.state = BATTLE_STATE.ATTACK;
-				break;
-			case COME_BACK:
-				this.currentDialog = "Come back " + this.activePokemon.getName().toUpperCase() + "!";
-				this.state = BATTLE_STATE.COME_BACK;
-				break;
-			case GO:
-				this.currentDialog = "Go, " + this.activePokemon.getName().toUpperCase() + "!";
-				this.state = BATTLE_STATE.GO;
-				break;
-			case CAPTURE:
-				this.currentDialog = "Player throws a pokeball!";
-				this.state = BATTLE_STATE.CAPTURE;
-				break;
-			case CAPTURE_SUCCESS:
-				this.currentDialog = enemy.getName().toUpperCase() + " was caught!";
-				this.state = BATTLE_STATE.CAPTURE_SUCCESS;
-				break;
-			case RUN_AWAY:
-				this.currentDialog = "Got away safely!";
-				this.state = BATTLE_STATE.RUN_AWAY;
-				break;
-			case FAINT_ENEMY:
-				this.currentDialog = "Enemy " + enemy.getName().toUpperCase() + " has fainted!";
-				this.state = BATTLE_STATE.FAINT_ENEMY;
-				break;
-			case END:
-				this.state = BATTLE_STATE.END;
-				this.endBattle();
-				break;
-			default:
-				this.currentDialog = "A wild \n" + enemy.getName().toUpperCase() + " attacks!";
-		}
-	}
-	public void attackPokemon(String moveType) {
+	public void attackPokemon() {
+		Move move = activePokemon.getMoveSet().get(selected.getNum() - 1);
 		if(this.state == BATTLE_STATE.ATTACK) {
-			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * 40 * (activePokemon.getAtk() / enemy.getDef())) / 50) + 2;
+			move.setPp(move.getPp() - 1);
+			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * move.getPower() * (activePokemon.getAtk() / enemy.getDef())) / 50) + 2;
 			double rand = Math.random() * (1 - 0.85) + 0.85;
 			int dPwr = (int) (attackPower * rand);
-			if( ( enemy.isType("flying") && moveType.equals("GROUND") ) || ( enemy.isType("ghost") && moveType.equals("NORMAL") ) || ( enemy.isType("normal") && moveType.equals("GHOST") )) {
+			if( ( enemy.isType("flying") && move.getType().equals(TYPE.GROUND) ) || ( enemy.isType("ghost") && move.getType().equals(TYPE.NORMAL) ) || ( enemy.isType("normal") && move.getType().equals(TYPE.GHOST) )) {
 				dPwr = 0;
 				System.out.println("NO EFFECT");
 			}
-			if(enemyWeaknesses.contains(moveType)) {
+			if(enemyWeaknesses.contains(move.getType().toString())) {
 				dPwr = dPwr * 2;
 				System.out.println("SUPER EFFECTIVE");
 			}
-			if(enemyStrengths.contains(moveType)) {
+			if(enemyStrengths.contains(move.getType().toString())) {
 				dPwr = dPwr / 2;
 				System.out.println("NOT VERY EFFECTIVE");
 			}
@@ -309,14 +280,14 @@ public class BattleScreen extends AbstractScreen {
 				dPwr = dPwr * 2;
 				System.out.println("CRITICAL");
 			}
-			System.out.println(dPwr);
 			
 			int dHp = enemy.getHp() - dPwr;
 			enemy.setHp(dHp > 0 ? dHp : 0);
 			enemyHealthAnim();
 			enemyHpChange = true;
+			selected.updateLocations();
 		} else {
-			this.updateDialog(BATTLE_STATE.ATTACK);
+			progressor.updateDialog(BATTLE_STATE.ATTACK);
 		}
 	}
 	public void switchPokemon() { //SAFE
@@ -328,9 +299,9 @@ public class BattleScreen extends AbstractScreen {
 				update(party.get(activePokemonNum + 1));
 				this.activePokemonNum += 1;
 			}
-			this.updateDialog(BATTLE_STATE.GO);
+			progressor.updateDialog(BATTLE_STATE.GO);
 		} else {
-			this.updateDialog(BATTLE_STATE.COME_BACK);
+			progressor.updateDialog(BATTLE_STATE.COME_BACK);
 		}
 	}
 	public void capturePokemon() {
@@ -348,10 +319,10 @@ public class BattleScreen extends AbstractScreen {
 //				System.out.println(Bokemon.prefs.getString(String.format("poke%s", party.size() + 1), null));
 //				Bokemon.prefs.flush();
 //			}
-//			this.updateDialog(BATTLE_STATE.CAPTURE_SUCCESS);
+//			progressor.updateDialog(BATTLE_STATE.CAPTURE_SUCCESS);
 //		} else {
 //			System.out.println(party.size());
-//			this.updateDialog(BATTLE_STATE.CAPTURE);
+//			progressor.updateDialog(BATTLE_STATE.CAPTURE);
 //		}
 	}
 	public void calculateShakes(Boolean caught, int a) {
@@ -507,12 +478,14 @@ public class BattleScreen extends AbstractScreen {
 							enemyHealthAnim();
 						}
 			}
-			if(this.state == BATTLE_STATE.QUESTION) {
+			if(this.state == BATTLE_STATE.QUESTION || this.state == BATTLE_STATE.QUESTION_ATTACK) {
 				batch.draw(uiAtlas.findRegion("arrow"),
 						this.selected.getX() * Settings.SCALED_TILE_SIZE,
 						this.selected.getY() * Settings.SCALED_TILE_SIZE,
 						40,
 						40);
+			}
+			if(this.state == BATTLE_STATE.QUESTION) {
 				sub.draw(batch, 
 						"ATTACK", 
 						24*Settings.SCALED_TILE_SIZE, 
@@ -529,6 +502,41 @@ public class BattleScreen extends AbstractScreen {
 						"RUN", 
 						33*Settings.SCALED_TILE_SIZE, 
 						(float) 3.5*Settings.SCALED_TILE_SIZE);
+			} else if(this.state == BATTLE_STATE.QUESTION_ATTACK) {
+				for(int i = 0; i < activePokemon.getMoveSet().size(); i++) {
+					if(i == 0) {
+						sub.draw(batch, 
+							activePokemon.getMoveSet().get(0).getName(), 
+							8*Settings.SCALED_TILE_SIZE, 
+							(float) 5.5*Settings.SCALED_TILE_SIZE);
+					}
+					if(i == 1) {
+						sub.draw(batch, 
+							activePokemon.getMoveSet().get(1).getName(), 
+							17*Settings.SCALED_TILE_SIZE, 
+							(float) 5.5*Settings.SCALED_TILE_SIZE);
+					}
+					if(i == 2) {
+						sub.draw(batch, 
+							activePokemon.getMoveSet().get(2).getName(), 
+							8*Settings.SCALED_TILE_SIZE, 
+							(float) 3.5*Settings.SCALED_TILE_SIZE);
+					}
+					if(i == 3) {
+						sub.draw(batch, 
+							activePokemon.getMoveSet().get(3).getName(), 
+							17*Settings.SCALED_TILE_SIZE, 
+							(float) 3.5*Settings.SCALED_TILE_SIZE);
+					}
+				}
+				sub2.draw(batch, 
+					String.format("PP: %s/%s", activePokemon.getMoveSet().get(selected.getNum() - 1).getPp(), activePokemon.getMoveSet().get(selected.getNum() - 1).getMax_pp()), 
+					29*Settings.SCALED_TILE_SIZE, 
+					(float) 5.5*Settings.SCALED_TILE_SIZE);
+				sub2.draw(batch, 
+					String.format("TYPE: %s", activePokemon.getMoveSet().size() >= selected.getNum() ?  activePokemon.getMoveSet().get(selected.getNum() - 1).getType().toString() : null), 
+					29*Settings.SCALED_TILE_SIZE, 
+					(float) 3.5*Settings.SCALED_TILE_SIZE);
 			}
 			
 			batch.end();

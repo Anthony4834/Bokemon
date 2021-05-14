@@ -18,7 +18,7 @@ public class Move_Reference {
 	private ArrayList<String> moveNames;
 	
 	public Move_Reference() {
-		PokeApi all = new PokeApi("move?limit=480");
+		PokeApi all = new PokeApi("move?limit=1");
 		moveNames = PokeApi.getAllMoveNames(all.responseContent.toString());
 		
 		for(String move : moveNames) {
@@ -33,7 +33,14 @@ public class Move_Reference {
 	public void constructMove(String name) {
 		PokeApi moveRef = new PokeApi("move/" + name);
 		HashMap<String, String> move = PokeApi.getMoveInfo(moveRef.responseContent.toString());
+		move.put("NAME", getName(name));
 		
 		moves.put(name.toUpperCase(), move);
+	}
+	public String getName(String s) {
+		while (s.contains("-")) {
+			  s = s.replace('-', ' ');
+		}
+		return s.toUpperCase();
 	}
 }

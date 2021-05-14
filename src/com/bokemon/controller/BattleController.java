@@ -15,105 +15,32 @@ public class BattleController extends InputAdapter {
 	}
 	@Override
 	public boolean keyDown(int keycode) {
-		if(keycode == Keys.D) {
-			switch(screen.selected) {
-				case ATTACK:
-					screen.selected = SELECTED.BAG;
-					break;
-				case BAG:
-					screen.selected = SELECTED.SWITCH;
-					break;
-				case SWITCH:
-					screen.selected = SELECTED.RUN;
-					break;
-				case RUN:
-					break;
-				default:
-					screen.selected = SELECTED.ATTACK;
-			}
+		if(keycode == Keys.D && screen.selected.getRight() != null && (screen.state == BATTLE_STATE.QUESTION || screen.selected.getRight().getNum() <= screen.activePokemon.getMoveSet().size()) ) {
+			screen.selected = screen.selected.getRight();
+			return false;
 		}
-		if(keycode == Keys.A) {		//RUN
-			switch(screen.selected) {
-				case ATTACK:
-					break;
-				case RUN:
-					screen.selected = SELECTED.SWITCH;
-					break;
-				case SWITCH:
-					screen.selected = SELECTED.BAG;
-					break;
-				case BAG:
-					screen.selected = SELECTED.ATTACK;
-					break;
-				default:
-					screen.selected = SELECTED.ATTACK;
-			}
+		if(keycode == Keys.A && screen.selected.getLeft() != null && (screen.state == BATTLE_STATE.QUESTION || screen.selected.getLeft().getNum() <= screen.activePokemon.getMoveSet().size()) ) {
+			screen.selected = screen.selected.getLeft();
+			return false;
 		}
-		if(keycode == Keys.S || keycode == Keys.W) {		//RUN
-			switch(screen.selected) {
-				case ATTACK:
-					screen.selected = SELECTED.SWITCH;
-					break;
-				case SWITCH:
-					screen.selected = SELECTED.ATTACK;
-					break;
-				case BAG:
-					screen.selected = SELECTED.RUN;
-					break;
-				case RUN:
-					screen.selected = SELECTED.BAG;
-					break;
-				default:
-					screen.selected = SELECTED.ATTACK;
+		if(keycode == Keys.S && (screen.state == BATTLE_STATE.QUESTION || screen.selected.getDown().getNum() <= screen.activePokemon.getMoveSet().size()) ) {
+			if(screen.selected.getDown() != null) {
+				screen.selected = screen.selected.getDown();
 			}
+			return false;
+		}
+		if(keycode == Keys.W && (screen.state == BATTLE_STATE.QUESTION || screen.selected.getUp().getNum() <= screen.activePokemon.getMoveSet().size()) ) {
+			if(screen.selected.getUp() != null) {
+				screen.selected = screen.selected.getUp();
+			}
+			return false;
 		}
 		if(keycode == Keys.SPACE) {
 			if(screen.enemyHpChange || screen.hpChange) {
 				return false;
 			}
-			if(screen.state == BATTLE_STATE.QUESTION) {
-				switch(screen.selected) {
-					case ATTACK:
-						screen.attackPokemon("NORMAL");
-						break;
-					case RUN:
-						screen.updateDialog(BATTLE_STATE.RUN_AWAY);
-						break;
-					case SWITCH:
-						screen.switchPokemon();
-						break;
-					case BAG:
-						screen.capturePokemon();
-						break;
-					default:
-						screen.selected = SELECTED.ATTACK;
-				}
-			} else {
-				switch(screen.state) {
-					case INIT:
-						screen.updateDialog(BATTLE_STATE.GO);
-						break;
-					case GO:
-						screen.updateDialog(BATTLE_STATE.QUESTION);
-						break;
-					case COME_BACK:
-						screen.switchPokemon();
-						break;
-					case ATTACK:
-						screen.attackPokemon("NORMAL");
-						break;
-					case CAPTURE:
-						screen.capturePokemon();
-						break;
-					case CAPTURE_SUCCESS:
-						screen.updateDialog(BATTLE_STATE.END);
-						break;
-					case FAINT_ENEMY:
-						screen.updateDialog(BATTLE_STATE.END);
-					default:
-						screen.updateDialog(BATTLE_STATE.END);
-				}
-			}
+			screen.progressBattle(screen.selected);
+			return false;
 		}
 		return false;
 	}

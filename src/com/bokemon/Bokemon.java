@@ -12,6 +12,7 @@ import com.bokemon.model.pokemon.move.Move_Reference;
 import com.bokemon.screen.BattleScreen;
 import com.bokemon.screen.GameScreen;
 import com.bokemon.util.Music_Reference;
+import com.bokemon.util.Pokemon_Data;
 import com.bokemon.util.transitions.BattleBlinkTransition;
 import com.bokemon.util.transitions.BattleBlinkTransitionAccessor;
 
@@ -46,8 +47,9 @@ public class Bokemon extends Game{
 		
 		prefs = Gdx.app.getPreferences("State");
 		
-		//pokemon_data = Gdx.app.getPreferences("pokemon_data"); // ***ONLY NEEDED WHEN UPDATING
-		//moveRef = new Move_Reference();
+		Pokemon_Data.debug();
+//		pokemon_data = Gdx.app.getPreferences("pokemon_data"); // ***ONLY NEEDED WHEN UPDATING
+//		moveRef = new Move_Reference();
 //		ref2  = new Pokemon_Reference2();
 //		typeRef  = new Type_Reference();	
 //		System.out.println(pokemon_data.getString("pokemon").length());
@@ -61,11 +63,6 @@ public class Bokemon extends Game{
 	}
 	@Override
 	public void render() {
-		
-//		tweenManager.update(Gdx.graphics.getDeltaTime());
-//		if (getScreen() instanceof AbstractScreen) {
-//			((AbstractScreen)getScreen()).(Gdx.graphics.getDeltaTime());
-//		}
 		
 		Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);

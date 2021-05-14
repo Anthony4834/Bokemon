@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import com.bokemon.model.pokemon.TYPE;
 
 public class Move {
+	private String name;
 	private TYPE type; // 
 	private String category; //
 	private int power; // 
@@ -29,9 +30,17 @@ public class Move {
 	    this.effect_chance = effect_chance;
 	}
 	public Move(JSONObject move) {
-		
+		makesContact = Boolean.valueOf(move.getJSONObject("MAKES_CONTACT").getString("value"));
+		category = String.valueOf(move.getJSONObject("CATEGORY").getString("value"));
+		effect = EFFECT.CONFUSED; //String.valueOf(move.getJSONObject("CATEGORY").getString("effect"));
+		effect_chance = move.getJSONObject("EFFECT_CHANCE").get("value").equals("null") ? 0 : move.getJSONObject("EFFECT_CHANCE").getInt("value");
+		power = move.getJSONObject("POWER").get("value").equals("null") ? 0 : Integer.valueOf(move.getJSONObject("POWER").getInt("value"));
+		priority = Integer.valueOf(move.getJSONObject("PRIORITY").getInt("value"));
+		type = TYPE.valueOf(move.getJSONObject("TYPE").getString("value").toUpperCase());
+		accuracy = Integer.valueOf(move.getJSONObject("ACCURACY").getInt("value"));
+		name = String.valueOf(move.getJSONObject("NAME").getString("value"));
+		max_pp = Integer.valueOf(move.getJSONObject("MAX_PP").getInt("value"));
 	}
-
 	public int getPp() {
 		return pp;
 	}
@@ -80,5 +89,8 @@ public class Move {
 
 	public double getEffect_chance() {
 		return effect_chance;
+	}
+	public String getName() {
+		return name;
 	}
 }

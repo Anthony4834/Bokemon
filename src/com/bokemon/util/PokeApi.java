@@ -163,7 +163,7 @@ public class PokeApi {
 		output.put("MAX_PP", String.valueOf(result.get("pp")));
 		output.put("MAKES_CONTACT", String.valueOf(output.get("CATEGORY").equals("physical")));
 		output.put("PRIORITY", String.valueOf(result.getInt("priority")));
-		output.put("EFFECT", result.getJSONArray("effect_entries").length() > 0 ? String.valueOf(result.getJSONArray("effect_entries").getJSONObject(0).get("short_effect")) : "null");
+		output.put("EFFECT", result.getJSONArray("effect_entries").length() > 0 ? String.valueOf(result.getJSONArray("effect_entries").getJSONObject(0).get("short_effect")) : null);
 		output.put("EFFECT_CHANCE", String.valueOf(result.get("effect_chance")));
 		
 		return output;

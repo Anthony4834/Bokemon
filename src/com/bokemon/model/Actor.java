@@ -123,11 +123,17 @@ public class Actor {
 		Bokemon.prefs.putString("poke1", "MEWTWO");
 		Bokemon.prefs.putString("poke1_lv", "100");
 		Bokemon.prefs.putString("poke1_hp", "4");
+		Bokemon.prefs.putString("poke1_mv1", "TACKLE");
+		Bokemon.prefs.putString("poke1_mv2", "HYDRO-PUMP");
+		Bokemon.prefs.putString("poke1_mv3", "BITE");
+		Bokemon.prefs.putString("poke1_mv4", "GIGA-DRAIN");
 		Bokemon.prefs.putString("poke2", "CHARMANDER");
 		Bokemon.prefs.putString("poke2_lv", "23");
+		Bokemon.prefs.putString("poke2_mv1", "TACKLE");
 		Bokemon.prefs.putString("poke3", "ABRA");
 		Bokemon.prefs.putString("poke3_lv", "14");
 		Bokemon.prefs.putString("poke3_hp", "25");
+		Bokemon.prefs.putString("poke3_mv1", "TACKLE");
 		
 		if(num < RARITY.COMMON.getMax()) {
 			Integer r = (int) Math.floor((Math.random() * (avail.COMMON.length)));
