@@ -28,7 +28,7 @@ import com.bokemon.model.pokemon.Pokemon_Sprites;
 import com.bokemon.model.pokemon.TYPE;
 import com.bokemon.model.pokemon.move.Move;
 import com.bokemon.model.world.AVAILABLE_LEVELS;
-import com.bokemon.util.Music_Reference;
+import com.bokemon.util.Jukebox;
 import com.bokemon.util.Pokemon_Data;
 
 public class BattleScreen extends AbstractScreen {
@@ -43,16 +43,26 @@ public class BattleScreen extends AbstractScreen {
 	private JSONObject typeRef;
 	private JSONObject moveRef;
 	
-	private BitmapFont main = new BitmapFont();
+	public BitmapFont main = new BitmapFont();
 	private BitmapFont sub = new BitmapFont();
 	private BitmapFont sub2 = new BitmapFont();
 	private BitmapFont name = new BitmapFont();
-	public String currentDialog = "";
+	
+	public char[] targetDialog;
+	public char[] targetDialogSpaced;
+	public String targetDialogStr;
+	public String currentDialog;
+	public float dialogTimer = 0;
+	public float relativeDialogTimer = 0;
+	
 	public boolean hpChange = false;
 	public boolean enemyHpChange = false;
+	public boolean textChanging = false;
+	
 	private Preferences pD = Bokemon.pokemon_data;
 	
 	public BATTLE_STATE state;
+	public BATTLE_STATE nextState;
 	public SELECTED selected;
 	private BattleProgressor progressor;
 	
@@ -143,7 +153,7 @@ public class BattleScreen extends AbstractScreen {
 		displayHp = activePokemon.getHp();
 		
 		
-		main.getData().setScale(4.5f);
+		main.getData().setScale(4f);
 		main.getData().setLineHeight(20f);
 		main.setColor(Color.DARK_GRAY);
 		sub.getData().setScale(4.5f);
@@ -153,7 +163,11 @@ public class BattleScreen extends AbstractScreen {
 		name.getData().setScale(enemy.getName().length() < 12 ? 4f : 3f);
 		name.setColor(Color.DARK_GRAY);
 		
-		currentDialog = "A wild " + enemy.getName() + " appeared!";
+		targetDialogStr = "A wild " + enemy.getName() + " appeared!";
+		targetDialog = targetDialogStr.toCharArray();
+		targetDialogSpaced = progressor.getSpaced(targetDialog);
+		currentDialog = "";
+		textChanging = true;
 
 	}
 	private ArrayList<Pokemon> buildParty() {
@@ -226,9 +240,9 @@ public class BattleScreen extends AbstractScreen {
 		}
 		allyHealthBar.colorCheck();
 	}
-	public void enemyHealthAnim() {
+	public void enemyHealthAnim(BATTLE_STATE nextState) {
 		float hpBarDelta = Gdx.graphics.getDeltaTime();
-		float speed = 180;
+		float speed = 100;
 		float dSizeX;
 		
 		if(enemyHealthBar.getSizeX() < HealthBar.max * (enemy.getHpPercentage() / 100)) {
@@ -244,7 +258,9 @@ public class BattleScreen extends AbstractScreen {
 			if(dSizeX <= HealthBar.max * (enemy.getHpPercentage() / 100) || dSizeX < 0) {
 				enemyHealthBar.setSizeX((float) (HealthBar.max * (enemy.getHpPercentage() / 100)) );
 				this.enemyHpChange = false;
-				progressor.updateDialog(enemy.getHp() > 0 ? BATTLE_STATE.QUESTION : BATTLE_STATE.FAINT_ENEMY);
+				if(this.textChanging == false) {
+					progressor.updateDialog(enemy.getHp() > 0 ? nextState : BATTLE_STATE.FAINT_ENEMY);
+				}
 			} else {
 				enemyHealthBar.setSizeX(dSizeX);
 			}
@@ -260,6 +276,8 @@ public class BattleScreen extends AbstractScreen {
 	public void attackPokemon() {
 		Move move = activePokemon.getMoveSet().get(selected.getNum() - 1);
 		if(this.state == BATTLE_STATE.ATTACK) {
+			nextState = BATTLE_STATE.QUESTION;
+			
 			move.setPp(move.getPp() - 1);
 			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * move.getPower() * (move.getCategory().equals("physical") ? (activePokemon.getAtk() / enemy.getDef()) : (activePokemon.getSpAtk()) / enemy.getSpDef() )) / 50) + 2;
 			double rand = Math.random() * (1 - 0.85) + 0.85;
@@ -267,25 +285,31 @@ public class BattleScreen extends AbstractScreen {
 			if( ( enemy.isType("flying") && move.getType().equals(TYPE.GROUND) ) || ( enemy.isType("ghost") && move.getType().equals(TYPE.NORMAL) ) || ( enemy.isType("normal") && move.getType().equals(TYPE.GHOST) )) {
 				dPwr = 0;
 				System.out.println("NO EFFECT");
+				nextState = BATTLE_STATE.ATTACK_NO_EFFECT;
+				enemyHealthAnim(nextState);
+				selected.updateLocations(SELECTED.POSITION.RIGHT);
+				return;
 			}
 			if(enemyWeaknesses.contains(move.getType().toString())) {
 				dPwr = dPwr * 2;
 				System.out.println("SUPER EFFECTIVE");
+				nextState = BATTLE_STATE.ATTACK_SUPER_EFFECTIVE;
 			}
 			if(enemyStrengths.contains(move.getType().toString())) {
 				dPwr = dPwr / 2;
 				System.out.println("NOT VERY EFFECTIVE");
+				nextState = BATTLE_STATE.ATTACK_NOT_VERY_EFFECTIVE;
 			}
 			if(Math.random() > 0.875) {
 				dPwr = dPwr * 2;
 				System.out.println("CRITICAL");
+				nextState = BATTLE_STATE.ATTACK_CRITICAL;
 			}
-			
 			int dHp = enemy.getHp() - dPwr;
 			enemy.setHp(dHp > 0 ? dHp : 0);
-			enemyHealthAnim();
+			enemyHealthAnim(nextState);
 			enemyHpChange = true;
-			selected.updateLocations();
+			selected.updateLocations(SELECTED.POSITION.RIGHT);
 		} else {
 			progressor.updateDialog(BATTLE_STATE.ATTACK);
 		}
@@ -340,7 +364,7 @@ public class BattleScreen extends AbstractScreen {
 		this.pokeballShakes = output;
 	}
 	public void endBattle() {
-		Music_Reference.current.dispose();
+		Jukebox.current.dispose();
 		this.initTransition(this, new GameScreen(this.getApp()));
 	}
 	@Override
@@ -365,7 +389,6 @@ public class BattleScreen extends AbstractScreen {
 	public void render(float delta) {
 		
 			batch.begin();
-			
 			batch.draw(background, 
 					0,
 					0,
@@ -398,7 +421,14 @@ public class BattleScreen extends AbstractScreen {
 					if(allyPlatform.getX() > 12*Settings.SCALED_TILE_SIZE) {
 						allyPlatform.setX(allyPlatform.getX() - platformDelta*(speed + 210));
 					}
-			if(this.state != BATTLE_STATE.INIT) {
+			if(this.loaded) {
+				if(textChanging) {
+					if(currentDialog.length() < targetDialogSpaced.length) {
+						currentDialog = currentDialog + targetDialogSpaced[currentDialog.length()];
+					} else {
+						textChanging = false;
+					}
+				}
 				batch.draw(allyPokemonTexture,
 						allyPlatform.getX() + 1*Settings.SCALED_TILE_SIZE,
 						6*Settings.SCALED_TILE_SIZE,
@@ -412,9 +442,9 @@ public class BattleScreen extends AbstractScreen {
 					(float) (Settings.WINDOW_X * 0.8),
 					(float) 400);
 			main.draw(batch, 
-					currentDialog, 
-					8*Settings.SCALED_TILE_SIZE, 
-					(float) 5.5*Settings.SCALED_TILE_SIZE);
+				currentDialog, 
+				(float) 6.5*Settings.SCALED_TILE_SIZE, 
+				(float) 5.5*Settings.SCALED_TILE_SIZE);
 			batch.draw(uiAtlas.findRegion("battleinfobox_friendly"),
 					(float) (allyPlatform.getX() + allyPlatform.getSizeX() + Settings.SCALED_TILE_SIZE),
 					(float) (allyPlatform.getY() + allyPlatform.getSizeY() / 1.5),
@@ -475,7 +505,7 @@ public class BattleScreen extends AbstractScreen {
 						(float) (enemyHealthBar.getSizeX()),
 						enemyHealthBar.getSizeY());
 						if(this.enemyHpChange) {
-							enemyHealthAnim();
+							enemyHealthAnim(nextState);
 						}
 			}
 			if(this.state == BATTLE_STATE.QUESTION || this.state == BATTLE_STATE.QUESTION_ATTACK) {

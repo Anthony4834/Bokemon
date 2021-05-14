@@ -21,7 +21,7 @@ import com.bokemon.model.world.TallGrassPatch;
 import com.bokemon.model.world.TileMap;
 import com.bokemon.tween.SpriteAccessor;
 import com.bokemon.util.AnimationSet;
-import com.bokemon.util.Music_Reference;
+import com.bokemon.util.Jukebox;
 
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
@@ -56,7 +56,7 @@ public class GameScreen extends AbstractScreen {
 	public GameScreen(Bokemon app) {
 		super(app);
 		
-		Bokemon.musicRef.playMusic(Bokemon.musicRef.pallet_town);
+		Jukebox.playMusic("pallet_town");
 		
 		grass1 = new Texture("res/graphics_unpacked/tiles/grass1.png");
 		grass2 = new Texture("res/graphics_unpacked/tiles/grass2.png");
@@ -106,7 +106,7 @@ public class GameScreen extends AbstractScreen {
 		grass1.dispose();
 		grass2.dispose();
 		houseTexture1.dispose();
-		Music_Reference.current.dispose();
+		Jukebox.current.dispose();
 	}
 
 	@Override

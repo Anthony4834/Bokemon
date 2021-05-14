@@ -13,7 +13,7 @@ public class BattleProgressor {
 		if(screen.state == BATTLE_STATE.QUESTION) {
 			switch(selected) {
 			case OPTION_1:
-				screen.selected.updateLocations();
+				screen.selected.updateLocations(SELECTED.POSITION.LEFT);
 				updateDialog(BATTLE_STATE.QUESTION_ATTACK);
 				break;
 			case OPTION_2:
@@ -48,12 +48,13 @@ public class BattleProgressor {
 				screen.capturePokemon();
 				break;
 			case CAPTURE_SUCCESS:
+			case FAINT_ENEMY:
+			case RUN_AWAY:
 				updateDialog(BATTLE_STATE.END);
 				break;
-			case FAINT_ENEMY:
-				updateDialog(BATTLE_STATE.END);
 			default:
-				updateDialog(BATTLE_STATE.END);
+				selected.updateLocations(SELECTED.POSITION.RIGHT);
+				updateDialog(BATTLE_STATE.QUESTION);
 			}
 		}
 	} //end update function
@@ -62,40 +63,57 @@ public class BattleProgressor {
 		switch(to) {
 			case QUESTION:
 				screen.selected = SELECTED.OPTION_1;
-				screen.currentDialog = "What should \n" + screen.activePokemon.getName().toUpperCase() + " do?";
+				setDialog("What should \n" + screen.activePokemon.getName().toUpperCase() + " do?");
 				screen.state = BATTLE_STATE.QUESTION;
 				break;
 			case QUESTION_ATTACK:
 				screen.selected = SELECTED.OPTION_1;
-				screen.currentDialog = "";
+				setDialog("");
 				screen.state = BATTLE_STATE.QUESTION_ATTACK;
 				break;
 			case ATTACK:
-				screen.currentDialog = screen.activePokemon.getName().toUpperCase() + " used \n" + screen.activePokemon.getMoveSet().get(screen.selected.getNum() - 1).getName();
+				setDialog(screen.activePokemon.getName().toUpperCase() + " used \n" + screen.activePokemon.getMoveSet().get(screen.selected.getNum() - 1).getName());
 				screen.state = BATTLE_STATE.ATTACK;
+				screen.attackPokemon();
+				break;
+			case ATTACK_CRITICAL:
+				setDialog("A critical hit!");
+				screen.state = BATTLE_STATE.ATTACK_CRITICAL;
+				break;
+			case ATTACK_SUPER_EFFECTIVE:
+				setDialog("It's super effective!");
+				screen.state = BATTLE_STATE.ATTACK_SUPER_EFFECTIVE;
+				break;
+			case ATTACK_NOT_VERY_EFFECTIVE:
+				setDialog("It's not very effective..");
+				screen.state = BATTLE_STATE.ATTACK_NOT_VERY_EFFECTIVE;
+				break;
+			case ATTACK_NO_EFFECT:
+				setDialog("It had no effect..");
+				screen.state = BATTLE_STATE.ATTACK_NO_EFFECT;
 				break;
 			case COME_BACK:
-				screen.currentDialog = "Come back " + screen.activePokemon.getName().toUpperCase() + "!";
+				setDialog("Come back " + screen.activePokemon.getName().toUpperCase() + "!");
 				screen.state = BATTLE_STATE.COME_BACK;
 				break;
 			case GO:
-				screen.currentDialog = "Go, " + screen.activePokemon.getName().toUpperCase() + "!";
+				setDialog("Go, " + screen.activePokemon.getName().toUpperCase() + "!");
 				screen.state = BATTLE_STATE.GO;
 				break;
 			case CAPTURE:
-				screen.currentDialog = "Player throws a pokeball!";
+				setDialog("Player throws a pokeball!");
 				screen.state = BATTLE_STATE.CAPTURE;
 				break;
 			case CAPTURE_SUCCESS:
-				screen.currentDialog = screen.enemy.getName().toUpperCase() + " was caught!";
+				setDialog(screen.enemy.getName().toUpperCase() + " was caught!");
 				screen.state = BATTLE_STATE.CAPTURE_SUCCESS;
 				break;
 			case RUN_AWAY:
-				screen.currentDialog = "Got away safely!";
+				setDialog("Got away safely!");
 				screen.state = BATTLE_STATE.RUN_AWAY;
 				break;
 			case FAINT_ENEMY:
-				screen.currentDialog = "Enemy " + screen.enemy.getName().toUpperCase() + " has fainted!";
+				setDialog("Enemy " + screen.enemy.getName().toUpperCase() + " has fainted!");
 				screen.state = BATTLE_STATE.FAINT_ENEMY;
 				break;
 			case END:
@@ -103,7 +121,20 @@ public class BattleProgressor {
 				screen.endBattle();
 				break;
 			default:
-				screen.currentDialog = "A wild \n" + screen.enemy.getName().toUpperCase() + " attacks!";
+				setDialog("A wild \n" + screen.enemy.getName().toUpperCase() + " attacks!");
 		}
+	}
+	public void setDialog(String str) {
+		screen.currentDialog = "";
+		screen.targetDialog = str.toCharArray();
+		screen.targetDialogSpaced = getSpaced(screen.targetDialog);
+		screen.textChanging = true;
+	}
+	public char[] getSpaced(char[] arr) {
+		String output = "";
+		for(char c : arr) {
+			output = output + " " + c;
+		}
+		return output.toCharArray();
 	}
 }

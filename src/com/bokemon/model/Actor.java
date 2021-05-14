@@ -14,6 +14,7 @@ import com.bokemon.model.world.TileMap;
 import com.bokemon.screen.BattleScreen;
 import com.bokemon.screen.GameScreen;
 import com.bokemon.util.AnimationSet;
+import com.bokemon.util.Jukebox;
 
 public class Actor {
 	private GameScreen screen;
@@ -107,7 +108,7 @@ public class Actor {
 			double num = Math.random();
 			if(num > 0.85) {
 				this.screen.controller.freeze();
-				Bokemon.musicRef.playMusic(Bokemon.musicRef.battle);
+				Jukebox.playMusic("wild_battle");
 				double num2 = Math.random();
 				this.screen.initBattle(num2, AVAILABLE_POKEMON.PALLET_TOWN);
 				return true;

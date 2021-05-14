@@ -56,17 +56,32 @@ public enum SELECTED {
 	public Integer getNum() {
 		return Integer.valueOf(this.toString().substring(7));
 	}
-	public void updateLocations() {
-		switch(String.valueOf(OPTION_1.getX())) {
-		case "22.5":
+	public enum POSITION {
+		LEFT,
+		RIGHT
+	}
+	public void updateLocations(POSITION p) {
+		switch(p) {
+		case LEFT:
 			for(int i = 1; i <= 4; i++) {
-				SELECTED.valueOf(String.format("OPTION_%s", i)).setX(SELECTED.valueOf(String.format("OPTION_%s", i)).getX() - 16);
+				if(i % 2 == 0) {
+					SELECTED.valueOf(String.format("OPTION_%s", i)).setX((float) 31.5 - 16);
+				} else {
+					SELECTED.valueOf(String.format("OPTION_%s", i)).setX((float) 22.5 - 16);
+				}
 			}
 			break;
-		default:
+		case RIGHT:
 			for(int i = 1; i <= 4; i++) {
-				SELECTED.valueOf(String.format("OPTION_%s", i)).setX(SELECTED.valueOf(String.format("OPTION_%s", i)).getX() + 16);
+				if(i % 2 == 0) {
+					SELECTED.valueOf(String.format("OPTION_%s", i)).setX((float) 31.5);
+				} else {
+					SELECTED.valueOf(String.format("OPTION_%s", i)).setX((float) 22.5);
+				}
 			}
+		default:
+			assert false;
+			return;
 		}
 	}
 	public void constructRelations() {

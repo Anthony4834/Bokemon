@@ -11,7 +11,7 @@ import com.bokemon.model.pokemon.Type_Reference;
 import com.bokemon.model.pokemon.move.Move_Reference;
 import com.bokemon.screen.BattleScreen;
 import com.bokemon.screen.GameScreen;
-import com.bokemon.util.Music_Reference;
+import com.bokemon.util.Jukebox;
 import com.bokemon.util.Pokemon_Data;
 import com.bokemon.util.transitions.BattleBlinkTransition;
 import com.bokemon.util.transitions.BattleBlinkTransitionAccessor;
@@ -31,12 +31,13 @@ public class Bokemon extends Game{
 	public static Preferences pokemon_data;
 	public static Pokemon_Reference2 ref2;
 	public static Type_Reference typeRef;
-	public static Music_Reference musicRef;
+	public static Jukebox musicRef;
 	public static Move_Reference moveRef;
 
 	@Override
 	public void create() {
 		
+		Jukebox.init();
 		tweenManager = new TweenManager();
 		
 		Tween.registerAccessor(BattleBlinkTransition.class, new BattleBlinkTransitionAccessor());
@@ -54,7 +55,6 @@ public class Bokemon extends Game{
 //		typeRef  = new Type_Reference();	
 //		System.out.println(pokemon_data.getString("pokemon").length());
 		
-		musicRef = new Music_Reference();
 		
 		screen = new GameScreen(this);
 		
