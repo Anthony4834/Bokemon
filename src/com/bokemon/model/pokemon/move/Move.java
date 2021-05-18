@@ -2,6 +2,7 @@ package com.bokemon.model.pokemon.move;
 
 import org.json.JSONObject;
 
+import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.model.pokemon.TYPE;
 
 public class Move {
@@ -40,6 +41,9 @@ public class Move {
 		accuracy = Integer.valueOf(move.getJSONObject("ACCURACY").getInt("value"));
 		name = String.valueOf(move.getJSONObject("NAME").getString("value"));
 		max_pp = Integer.valueOf(move.getJSONObject("MAX_PP").getInt("value"));
+	}
+	public Boolean typeComparison(Move move, Pokemon target) {
+		return ( target.isType("flying") && move.getType().equals(TYPE.GROUND) ) || ( target.isType("ghost") && move.getType().equals(TYPE.NORMAL) ) || ( target.isType("normal") && move.getType().equals(TYPE.GHOST) );
 	}
 	public int getPp() {
 		return pp;

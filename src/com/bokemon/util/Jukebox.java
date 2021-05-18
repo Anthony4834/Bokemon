@@ -20,7 +20,7 @@ public class Jukebox {
 		music.put("pallet_town", Gdx.audio.newMusic(Gdx.files.internal("res/sounds/pallet_town.mp3")));
 		music.put("wild_battle", Gdx.audio.newMusic(Gdx.files.internal("res/sounds/wild_battle.mp3")));
 		
-		sounds.put("select", Gdx.audio.newSound(Gdx.files.internal("res/sounds/select.ogg")));
+		sounds.put("nav", Gdx.audio.newSound(Gdx.files.internal("res/sounds/select.mp3")));
 	}
 	
 	public static void playMusic(String s) {
@@ -35,6 +35,7 @@ public class Jukebox {
 		current.setVolume((float) 0.05);
 	}
 	public static void playSound(String s) {
-		sounds.get(s).play(1f);
+		Sound sound = sounds.get(s);
+		sound.play(1f);
 	}
 }

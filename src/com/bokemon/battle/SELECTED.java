@@ -60,7 +60,7 @@ public enum SELECTED {
 		LEFT,
 		RIGHT
 	}
-	public void updateLocations(POSITION p) {
+	public static void updateLocations(POSITION p) {
 		switch(p) {
 		case LEFT:
 			for(int i = 1; i <= 4; i++) {

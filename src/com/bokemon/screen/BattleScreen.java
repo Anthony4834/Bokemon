@@ -1,6 +1,8 @@
 package com.bokemon.screen;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 import org.json.JSONObject;
 
@@ -15,6 +17,8 @@ import com.badlogic.gdx.utils.Json;
 import com.bokemon.Bokemon;
 import com.bokemon.Settings;
 import com.bokemon.battle.BATTLE_STATE;
+import com.bokemon.battle.BattleEvent;
+import com.bokemon.battle.BattleEvent.EVENT_TYPE;
 import com.bokemon.battle.BattleProgressor;
 import com.bokemon.battle.HealthBar;
 import com.bokemon.battle.Platform;
@@ -36,7 +40,7 @@ public class BattleScreen extends AbstractScreen {
 	private SpriteBatch batch;
 	public TextureAtlas atlas;
 	private TextureAtlas uiAtlas;
-	private BattleController controller;
+	public BattleController controller;
 	private Json json = new Json();
 	
 	private JSONObject ref;
@@ -59,27 +63,30 @@ public class BattleScreen extends AbstractScreen {
 	public boolean enemyHpChange = false;
 	public boolean textChanging = false;
 	
+	public Queue<BattleEvent> queue = new LinkedList<BattleEvent>();
+	public BattleEvent nextEvent = queue.peek();
+	
 	private Preferences pD = Bokemon.pokemon_data;
 	
 	public BATTLE_STATE state;
 	public BATTLE_STATE nextState;
 	public SELECTED selected;
-	private BattleProgressor progressor;
+	public BattleProgressor progressor;
 	
 	public Pokemon_Sprites sprites = new Pokemon_Sprites();
-	private ArrayList<Pokemon> party;
+	public ArrayList<Pokemon> party;
 	public Pokemon activePokemon;
-	private int activePokemonNum = 0;
+	public int activePokemonNum = 0;
 	public Pokemon enemy;
 	private TextureRegion background;
 	private TextureRegion allyPokemonTexture;
 	private TextureRegion enemyPokemonTexture;
 	
-	private TYPE type;
-	private ArrayList<String> enemyWeaknesses;
-	private ArrayList<String> enemyStrengths;
-	private ArrayList<String> allyWeaknesses;
-	private ArrayList<String> allyStrengths;
+	public TYPE type;
+	public ArrayList<String> enemyWeaknesses;
+	public ArrayList<String> enemyStrengths;
+	public ArrayList<String> allyWeaknesses;
+	public ArrayList<String> allyStrengths;
 	
 	private ArrayList<Move> allyMoveSet;
 	private ArrayList<Move> enemyMoveSet;
@@ -87,12 +94,12 @@ public class BattleScreen extends AbstractScreen {
 	private Platform enemyPlatform;
 	private Platform allyPlatform;
 	
-	private int pokeballShakes = 0;
+	public int pokeballShakes = 0;
 	
-	private XpBar xpBar;
-	private HealthBar allyHealthBar;
-	private float displayHp;
-	private HealthBar enemyHealthBar;
+	public XpBar xpBar;
+	public HealthBar allyHealthBar;
+	public float displayHp;
+	public HealthBar enemyHealthBar;
 	
 	private boolean loaded = false;
 	
@@ -104,7 +111,7 @@ public class BattleScreen extends AbstractScreen {
 		typeRef = Pokemon_Data.get("types");
 		moveRef = Pokemon_Data.get("moves");
 		
-		this.enemy = new Pokemon(ref.getJSONObject("GENGAR"));
+		this.enemy = new Pokemon(ref.getJSONObject(enemyName));
 
 		if(isWild) {
 			enemy.setLevel( (int) (Math.random() * (AVAILABLE_LEVELS.PALLET_TOWN.getMax() - AVAILABLE_LEVELS.PALLET_TOWN.getMin()) ) + AVAILABLE_LEVELS.PALLET_TOWN.getMin() );
@@ -168,6 +175,9 @@ public class BattleScreen extends AbstractScreen {
 		targetDialogSpaced = progressor.getSpaced(targetDialog);
 		currentDialog = "";
 		textChanging = true;
+		System.out.println(state.toString());
+		queue.add(new BattleEvent(this, "Go, " + activePokemon.getName() + "!", EVENT_TYPE.DIALOG));
+		queue.add(new BattleEvent(this, "What should \n" + activePokemon.getName() + " do?", EVENT_TYPE.CHANGE_STATE));
 
 	}
 	private ArrayList<Pokemon> buildParty() {
@@ -205,9 +215,6 @@ public class BattleScreen extends AbstractScreen {
 		}
 		return output;
 	}
-	public void progressBattle(SELECTED selected) {
-		progressor.update(selected);
-	}
 	
 	public void healthAnim() {
 		float hpBarDelta = Gdx.graphics.getDeltaTime();
@@ -240,129 +247,14 @@ public class BattleScreen extends AbstractScreen {
 		}
 		allyHealthBar.colorCheck();
 	}
-	public void enemyHealthAnim(BATTLE_STATE nextState) {
-		float hpBarDelta = Gdx.graphics.getDeltaTime();
-		float speed = 100;
-		float dSizeX;
-		
-		if(enemyHealthBar.getSizeX() < HealthBar.max * (enemy.getHpPercentage() / 100)) {
-			dSizeX = enemyHealthBar.getSizeX() + hpBarDelta*speed;
-			if(dSizeX >= HealthBar.max * (enemy.getHpPercentage() / 100)) {
-				enemyHealthBar.setSizeX((float) (HealthBar.max * (enemy.getHpPercentage() / 100)) );
-				this.enemyHpChange = false;
-			} else {
-				enemyHealthBar.setSizeX(dSizeX);
-			}
-		} else {
-			dSizeX = enemyHealthBar.getSizeX() - hpBarDelta*speed;
-			if(dSizeX <= HealthBar.max * (enemy.getHpPercentage() / 100) || dSizeX < 0) {
-				enemyHealthBar.setSizeX((float) (HealthBar.max * (enemy.getHpPercentage() / 100)) );
-				this.enemyHpChange = false;
-				if(this.textChanging == false) {
-					progressor.updateDialog(enemy.getHp() > 0 ? nextState : BATTLE_STATE.FAINT_ENEMY);
-				}
-			} else {
-				enemyHealthBar.setSizeX(dSizeX);
-			}
-		}
-		enemyHealthBar.colorCheck();
-	}
 	public void update(Pokemon active) { //SAFE
 		this.activePokemon = active;
 		allyPokemonTexture = atlas.findRegion("pokemon_back_sprites/" + activePokemon.getId());
 		this.hpChange = true;
 		healthAnim();
 	}
-	public void attackPokemon() {
-		Move move = activePokemon.getMoveSet().get(selected.getNum() - 1);
-		if(this.state == BATTLE_STATE.ATTACK) {
-			nextState = BATTLE_STATE.QUESTION;
-			
-			move.setPp(move.getPp() - 1);
-			int attackPower = ((((2 * activePokemon.getLevel()) / 5 + 2) * move.getPower() * (move.getCategory().equals("physical") ? (activePokemon.getAtk() / enemy.getDef()) : (activePokemon.getSpAtk()) / enemy.getSpDef() )) / 50) + 2;
-			double rand = Math.random() * (1 - 0.85) + 0.85;
-			int dPwr = (int) (attackPower * rand);
-			if( ( enemy.isType("flying") && move.getType().equals(TYPE.GROUND) ) || ( enemy.isType("ghost") && move.getType().equals(TYPE.NORMAL) ) || ( enemy.isType("normal") && move.getType().equals(TYPE.GHOST) )) {
-				dPwr = 0;
-				System.out.println("NO EFFECT");
-				nextState = BATTLE_STATE.ATTACK_NO_EFFECT;
-				enemyHealthAnim(nextState);
-				selected.updateLocations(SELECTED.POSITION.RIGHT);
-				return;
-			}
-			if(enemyWeaknesses.contains(move.getType().toString())) {
-				dPwr = dPwr * 2;
-				System.out.println("SUPER EFFECTIVE");
-				nextState = BATTLE_STATE.ATTACK_SUPER_EFFECTIVE;
-			}
-			if(enemyStrengths.contains(move.getType().toString())) {
-				dPwr = dPwr / 2;
-				System.out.println("NOT VERY EFFECTIVE");
-				nextState = BATTLE_STATE.ATTACK_NOT_VERY_EFFECTIVE;
-			}
-			if(Math.random() > 0.875) {
-				dPwr = dPwr * 2;
-				System.out.println("CRITICAL");
-				nextState = BATTLE_STATE.ATTACK_CRITICAL;
-			}
-			int dHp = enemy.getHp() - dPwr;
-			enemy.setHp(dHp > 0 ? dHp : 0);
-			enemyHealthAnim(nextState);
-			enemyHpChange = true;
-			selected.updateLocations(SELECTED.POSITION.RIGHT);
-		} else {
-			progressor.updateDialog(BATTLE_STATE.ATTACK);
-		}
-	}
-	public void switchPokemon() { //SAFE
-		if(this.state == BATTLE_STATE.COME_BACK) {
-			if(this.activePokemon == party.get(party.size() - 1)) {
-				this.activePokemonNum = 0;
-				update(party.get(0));
-			} else {
-				update(party.get(activePokemonNum + 1));
-				this.activePokemonNum += 1;
-			}
-			progressor.updateDialog(BATTLE_STATE.GO);
-		} else {
-			progressor.updateDialog(BATTLE_STATE.COME_BACK);
-		}
-	}
-	public void capturePokemon() {
-		int a = Capture_Calculator.genChances(enemy);
-		if(Capture_Calculator.attemptCapture(a)) {
-			calculateShakes(true, a);
-			System.out.println("CAUGHT");
-		} else {
-			calculateShakes(false, a);
-			System.out.println(String.format("FAILED - [%s] shakes", this.pokeballShakes));
-		}
-//		if(this.state == BATTLE_STATE.CAPTURE) {
-//			if(party.size() < 6) {
-//				Bokemon.prefs.putString(String.format("poke%s", party.size() + 1), enemy.getName().toUpperCase());
-//				System.out.println(Bokemon.prefs.getString(String.format("poke%s", party.size() + 1), null));
-//				Bokemon.prefs.flush();
-//			}
-//			progressor.updateDialog(BATTLE_STATE.CAPTURE_SUCCESS);
-//		} else {
-//			System.out.println(party.size());
-//			progressor.updateDialog(BATTLE_STATE.CAPTURE);
-//		}
-	}
-	public void calculateShakes(Boolean caught, int a) {
-		int output = 0;
-		if(caught) {
-			output += 3;
-		} else {
-			for(int i = 0; i < 3; i++) {
-				if(!Capture_Calculator.shake(a)) {
-					output++;
-				}
-			}
-		}
-		
-		this.pokeballShakes = output;
-	}
+
+	
 	public void endBattle() {
 		Jukebox.current.dispose();
 		this.initTransition(this, new GameScreen(this.getApp()));
@@ -504,8 +396,8 @@ public class BattleScreen extends AbstractScreen {
 						(float) (enemyPlatform.getY() + enemyPlatform.getSizeY() * 0.887),
 						(float) (enemyHealthBar.getSizeX()),
 						enemyHealthBar.getSizeY());
-						if(this.enemyHpChange) {
-							enemyHealthAnim(nextState);
+						if(BattleEvent.current != null && BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ENEMY) {
+							queue.peek().init();
 						}
 			}
 			if(this.state == BATTLE_STATE.QUESTION || this.state == BATTLE_STATE.QUESTION_ATTACK) {
