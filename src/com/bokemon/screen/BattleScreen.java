@@ -115,8 +115,10 @@ public class BattleScreen extends AbstractScreen {
 
 		if(isWild) {
 			enemy.setLevel( (int) (Math.random() * (AVAILABLE_LEVELS.PALLET_TOWN.getMax() - AVAILABLE_LEVELS.PALLET_TOWN.getMin()) ) + AVAILABLE_LEVELS.PALLET_TOWN.getMin() );
+			enemy.setMoveSet(buildWildMoveSet(enemy));
+			System.out.println(enemy.getMoveSet());
 		}
-		enemy.setLevel(90);
+		enemy.setLevel(100);
 		enemy.updateValues();
 		enemy.setHp(enemy.getMaxHp());
 		
@@ -178,8 +180,8 @@ public class BattleScreen extends AbstractScreen {
 		System.out.println(state.toString());
 		queue.add(new BattleEvent(this, "Go, " + activePokemon.getName() + "!", EVENT_TYPE.DIALOG));
 		queue.add(new BattleEvent(this, "What should \n" + activePokemon.getName() + " do?", EVENT_TYPE.CHANGE_STATE));
-
 	}
+	
 	private ArrayList<Pokemon> buildParty() {
 		ArrayList<Pokemon> output = new ArrayList<Pokemon>();
 		for(int i = 1; i <= 6; i++) {
@@ -189,17 +191,16 @@ public class BattleScreen extends AbstractScreen {
 				
 				Pokemon toAdd = new Pokemon(ref.getJSONObject(name));
 				
-				toAdd.setMoveSet(buildMoveSet(i));
+				toAdd.setMoveSet(buildMoveSet(true, i));
 				toAdd.setLevel(Integer.valueOf(Bokemon.prefs.getString(String.format("poke%s_lv", i), "4")));
 				toAdd.updateValues();
 				toAdd.setHp(Integer.valueOf(Bokemon.prefs.getString(String.format("poke%s_hp", i), String.valueOf(toAdd.getMaxHp()))));
-				//toAdd.printLevels();
 				output.add(toAdd);
 			}
 		}
 		return output;
 	}
-	private ArrayList<Move> buildMoveSet(int pokemon) {
+	private ArrayList<Move> buildMoveSet(Boolean ally, int pokemon) {
 		ArrayList<Move> output = new ArrayList<Move>();
 		
 		for(int i = 1; i <= 4; i++) {
@@ -209,13 +210,28 @@ public class BattleScreen extends AbstractScreen {
 			}
 			System.out.println(" " + moveName);
 			Move move = new Move(moveRef.getJSONObject(moveName));
-			move.setPp(move.getMax_pp());
+			move.setPp(Bokemon.prefs.getInteger(String.format("poke%s_mv%s_pp", pokemon, i), move.getMax_pp()));
 			
 			output.add(move);
 		}
 		return output;
 	}
-	
+	public ArrayList<Move> buildWildMoveSet(Pokemon enemy) {
+		ArrayList<Move> output = new ArrayList<Move>();
+		ArrayList<String> possible = enemy.getPossibleMoves();
+		for(int i = 0; i < possible.size() && i < 3; i++) {
+			int rand = (int) Math.random() * possible.size();
+			String moveName = possible.get(rand).toUpperCase();
+			
+			Move move = new Move(moveRef.getJSONObject(moveName));
+			possible.remove(rand);
+			move.setPp(move.getMax_pp());
+			
+			output.add(move);
+		}
+		
+		return output;
+	}
 	public void healthAnim() {
 		float hpBarDelta = Gdx.graphics.getDeltaTime();
 		float speed = 180;
@@ -247,11 +263,15 @@ public class BattleScreen extends AbstractScreen {
 		}
 		allyHealthBar.colorCheck();
 	}
+	
 	public void update(Pokemon active) { //SAFE
 		this.activePokemon = active;
+		activePokemon.updateValues();
+		
+		displayHp = activePokemon.getHp();
+		allyHealthBar.setSizeX((int) (HealthBar.max * (activePokemon.getHpPercentage() / 100)) );
+		
 		allyPokemonTexture = atlas.findRegion("pokemon_back_sprites/" + activePokemon.getId());
-		this.hpChange = true;
-		healthAnim();
 	}
 
 	
@@ -370,8 +390,8 @@ public class BattleScreen extends AbstractScreen {
 						(float) (allyPlatform.getY() + allyPlatform.getSizeY() * 1.2),
 						(float) (allyHealthBar.getSizeX()),
 						allyHealthBar.getSizeY());
-						if(this.hpChange) {
-							healthAnim();
+						if(BattleEvent.current != null && BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ALLY) {
+							queue.peek().init();
 						}
 				batch.draw(xpBar.get(), 
 						(float) (allyPlatform.getX() + allyPlatform.getSizeX() * 1.255),

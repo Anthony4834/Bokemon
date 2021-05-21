@@ -48,12 +48,13 @@ public class Bokemon extends Game{
 		
 		prefs = Gdx.app.getPreferences("State");
 		
-		Pokemon_Data.debug();
+//		Pokemon_Data.debug();
 //		pokemon_data = Gdx.app.getPreferences("pokemon_data"); // ***ONLY NEEDED WHEN UPDATING
 //		moveRef = new Move_Reference();
 //		ref2  = new Pokemon_Reference2();
 //		typeRef  = new Type_Reference();	
-//		System.out.println(pokemon_data.getString("pokemon").length());
+//		System.out.print("POKEMON_DATA_LENGTH: ");
+//		System.out.print(pokemon_data.getString("pokemon").length());
 		
 		
 		screen = new GameScreen(this);

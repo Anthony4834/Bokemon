@@ -80,6 +80,9 @@ public class PokeApi {
 		JSONObject result = new JSONObject(responseBody);
 		JSONArray statsObjs = result.getJSONArray("stats");
 		JSONArray types = result.getJSONArray("types");
+		JSONArray moves = result.getJSONArray("moves");
+		
+		
 		
 		HashMap<String, String> pokemon = new HashMap<String, String>();
 		
@@ -94,8 +97,32 @@ public class PokeApi {
 		pokemon.put("BASE_SPD", String.valueOf(statsObjs.getJSONObject(5).getInt("base_stat")));
 		pokemon.put("SIZE", shrinkList.contains(pokemon.get("ORIGIN_NAME")) ? "7" : "9");
 		pokemon.put("TYPES", json.toJson(types));
+		pokemon.put("MOVES_LEARNED", getMovesLearned(moves));
 		
 		return pokemon;
+	}
+	public static String getMovesLearned(JSONArray allMoves) {
+		JSONObject output = new JSONObject();
+		
+		JSONArray byLevel = new JSONArray();
+		JSONArray byMachine = new JSONArray();
+		
+		for(int i = 0; i < allMoves.length(); i++) {
+			if(allMoves.getJSONObject(i).getJSONArray("version_group_details").getJSONObject(0).getJSONObject("move_learn_method").getString("name").equals("level-up")) {
+				String name = allMoves.getJSONObject(i).getJSONObject("move").getString("name");
+				String level = String.valueOf(allMoves.getJSONObject(i).getJSONArray("version_group_details").getJSONObject(0).getInt("level_learned_at"));
+				
+				byLevel.put(new String[] {name, level});
+			} else if(allMoves.getJSONObject(i).getJSONArray("version_group_details").getJSONObject(0).getJSONObject("move_learn_method").getString("name").equals("machine")) {
+				String name = allMoves.getJSONObject(i).getJSONObject("move").getString("name");
+				byMachine.put(name);
+			}
+		}
+		
+		output.put("BY_LEVEL", byLevel);
+		output.put("BY_MACHINE", byMachine);
+		
+		return json.toJson(output);
 	}
 	public static HashMap<String, JSONArray> getDamageRelations(String responseBody) {
 		JSONObject result = new JSONObject(responseBody);

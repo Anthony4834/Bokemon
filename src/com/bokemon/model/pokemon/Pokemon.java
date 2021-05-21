@@ -1,16 +1,20 @@
 package com.bokemon.model.pokemon;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Json;
 import com.badlogic.gdx.utils.Json.Serializable;
 import com.badlogic.gdx.utils.JsonValue;
 import com.bokemon.Settings;
 import com.bokemon.model.pokemon.move.Move;
+import com.bokemon.model.pokemon.move.Move_Reference;
 
 public class Pokemon implements Serializable {
 	private String name;
@@ -32,23 +36,8 @@ public class Pokemon implements Serializable {
 	private float size;
 	private Json json = new Json();
 	private ArrayList<Move> moveSet;
+	private JSONArray movesLearnedByLevel;
 	
-	public Pokemon(String n, int id, int hp, int atk, int def, int spAtk, int spDef, int spd, JSONArray types, int captureRate, int size) {
-		this.name = n;
-		this.id = id;
-		this.maxHp = hp;
-		this.hp = hp;
-		this.atk = atk;
-		this.def = def;
-		this.spAtk = spAtk;
-		this.spDef = spDef;
-		this.spd = spd;
-		this.types = types;
-		this.captureRate = captureRate;
-		this.size = size*Settings.SCALED_TILE_SIZE;
-		this.gender = Math.random() >= 0.5 ? "male" : "female";
-		//this.texture = sprites.items.get(n.toUpperCase());
-	}
 	public Pokemon(JSONObject info) {
 		name = info.getJSONObject("ORIGIN_NAME").get("value").toString();
 		id = Integer.valueOf(info.getJSONObject("ID").get("value").toString());
@@ -62,6 +51,7 @@ public class Pokemon implements Serializable {
 		captureRate = Integer.valueOf(info.getJSONObject("CAPTURE_RATE").get("value").toString());
 		size = Settings.SCALED_TILE_SIZE * Integer.valueOf(info.getJSONObject("SIZE").get("value").toString());
 		gender = Math.random() >= 0.5 ? "male" : "female";
+		movesLearnedByLevel = this.getMovesLearnedByLevel(info.getJSONObject("MOVES_LEARNED"));
 	}
 	public void updateValues() {
 		this.maxHp = (int) (((1+(2*this.maxHp)+1+100)*this.level)/100)+10;
@@ -165,6 +155,28 @@ public class Pokemon implements Serializable {
 	}
 	public void setSpd(int spd) {
 		this.spd = spd;
+	}
+	@SuppressWarnings("unchecked")
+	public ArrayList<String> getPossibleMoves() {
+		ArrayList<String> output = new ArrayList<String>();
+		
+		for(int i = 0; i < movesLearnedByLevel.length(); i++) {
+			Array<Object> current = (Array<Object>) movesLearnedByLevel.get(i);
+			if((float) current.get(1) <= level) {
+				String moveName = (String) current.get(0);
+				output.add(moveName);
+			}
+		}
+		
+		return output;
+		
+	}
+	@SuppressWarnings("unchecked")
+	private JSONArray getMovesLearnedByLevel(JSONObject ref) {
+		HashMap<String, JSONArray> byLevelWrapper = (HashMap<String, JSONArray>) json.fromJson(HashMap.class, ref.getString("value")).get("map");
+		JSONArray byLevel = byLevelWrapper.get("BY_LEVEL");
+		
+		return byLevel;
 	}
 	public Boolean isType(String type) {
 		for(int i = 0; i < types.length(); i++) {

@@ -123,7 +123,7 @@ public class Actor {
 		Bokemon.prefs.putInteger("playerY", this.getY());
 		Bokemon.prefs.putString("poke1", "MEWTWO");
 		Bokemon.prefs.putString("poke1_lv", "100");
-		Bokemon.prefs.putString("poke1_hp", "4");
+		Bokemon.prefs.putString("poke1_hp", "200");
 		Bokemon.prefs.putString("poke1_mv1", "TACKLE");
 		Bokemon.prefs.putString("poke1_mv2", "HYDRO-PUMP");
 		Bokemon.prefs.putString("poke1_mv3", "BITE");

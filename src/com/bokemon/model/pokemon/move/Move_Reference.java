@@ -37,7 +37,7 @@ public class Move_Reference {
 		
 		moves.put(name.toUpperCase(), move);
 	}
-	public String getName(String s) {
+	public static String getName(String s) {
 		while (s.contains("-")) {
 			  s = s.replace('-', ' ');
 		}

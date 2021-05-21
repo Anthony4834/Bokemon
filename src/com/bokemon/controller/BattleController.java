@@ -76,6 +76,11 @@ public class BattleController extends InputAdapter {
 				}
 				return false;
 			}
+			if(keycode == Keys.L) {
+				screen.state = BATTLE_STATE.ATTACK;
+				screen.progressor.attackPokemon(screen.enemy, screen.activePokemon);
+				return false;
+			}
 		}
 		return false;
 	}
