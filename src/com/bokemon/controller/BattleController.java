@@ -51,6 +51,9 @@ public class BattleController extends InputAdapter {
 			new BattleEvent(screen, "", EVENT_TYPE.CHANGE_STATE).init(); //PROGRESS BATTLE
 			return false;
 		}
+		if(keycode == Keys.X && screen.state.getPrevious() != null) {
+			new BattleEvent(screen, null, EVENT_TYPE.CANCEL).init();
+		}
 		if(!lockedPartial) {
 			if(keycode == Keys.D && screen.selected.getRight() != null && (screen.state == BATTLE_STATE.QUESTION || screen.selected.getRight().getNum() <= screen.activePokemon.getMoveSet().size()) ) {
 				Jukebox.playSound("nav");
@@ -78,7 +81,7 @@ public class BattleController extends InputAdapter {
 			}
 			if(keycode == Keys.L) {
 				screen.state = BATTLE_STATE.ATTACK;
-				screen.progressor.attackPokemon(screen.enemy, screen.activePokemon);
+				screen.progressor.decideOrder(screen.activePokemon, screen.enemy);
 				return false;
 			}
 		}

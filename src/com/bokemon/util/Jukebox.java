@@ -41,8 +41,8 @@ public class Jukebox {
 		Sound sound = sounds.get(s);
 		sound.play(1f);
 	}
-	public static void playSound(String s, float vol) {
+	public static void playSound(String s, float volume) {
 		Sound sound = sounds.get(s);
-		sound.play(vol);
+		sound.play(volume);
 	}
 }

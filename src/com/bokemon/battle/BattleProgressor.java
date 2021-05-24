@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.bokemon.Bokemon;
 import com.bokemon.battle.BattleEvent.EVENT_TYPE;
+import com.bokemon.battle.SELECTED.POSITION;
 import com.bokemon.model.pokemon.Capture_Calculator;
 import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.model.pokemon.move.Move;
@@ -12,17 +13,47 @@ import com.bokemon.screen.BattleScreen;
 public class BattleProgressor {
 	private BattleScreen screen;
 	
+	public Boolean awaitingAttack;
+	public Boolean allyAwaitingAttack;
+	public Move awaitingMove;
+	
 	public BattleProgressor(BattleScreen s) {
 		this.screen = s;
+		this.awaitingAttack = false;
 	}
 	
+	public void decideOrder(Pokemon ally, Pokemon enemy) {
+		Move move_ally = ally.getMoveSet().get(screen.selected.getNum() - 1);
+		Move move_enemy = enemy.getMoveSet().get( (int) (Math.random() * enemy.getMoveSet().size())); 
+		
+		awaitingAttack = true;
+		
+		if(move_ally.getPriority() > move_enemy.getPriority()) {
+			attackPokemon(ally, enemy, move_ally);
+			allyAwaitingAttack = false;
+			awaitingMove = move_enemy;
+		} else if(move_enemy.getPriority() > move_ally.getPriority()) {
+			attackPokemon(enemy, ally, move_enemy);
+			allyAwaitingAttack = true;
+			awaitingMove = move_ally;
+		} else {
+			if(ally.getSpd() >= enemy.getSpd()) {
+				attackPokemon(ally, enemy, move_ally);
+				allyAwaitingAttack = false;
+				awaitingMove = move_enemy;
+			} else {
+				attackPokemon(enemy, ally, move_enemy);
+				allyAwaitingAttack = true;
+				awaitingMove = move_ally;
+			}
+		}
+	}
 	
 	@SuppressWarnings("unchecked")
-	public void attackPokemon(Pokemon attacker, Pokemon target) {
+	public void attackPokemon(Pokemon attacker, Pokemon target, Move move) {
 		int dPwr;
 		ArrayList<Object> damageStats;
 		ArrayList<BattleEvent> instanceEvents;
-		Move move = attacker == screen.activePokemon ? attacker.getMoveSet().get(screen.selected.getNum() - 1) : attacker.getMoveSet().get( (int) (Math.random() * attacker.getMoveSet().size()) );
 		
 		setDialog(attacker.getName() + " used " + move.getName());
 		
@@ -35,9 +66,8 @@ public class BattleProgressor {
 		int dHp = target.getHp() - dPwr;
 		target.setHp(dHp > 0 ? dHp : 0);
 		
-		screen.queue.add(new BattleEvent(screen, null, EVENT_TYPE.DELAY_HIT));
+		screen.queue.add(new BattleEvent(screen, null, attacker == screen.enemy ? EVENT_TYPE.DELAY_HIT_ALLY : EVENT_TYPE.DELAY_HIT_ENEMY));
 		screen.queue.peek().init();
-		screen.queue.add(new BattleEvent(screen, null, target == screen.enemy ? EVENT_TYPE.HEALTH_ANIM_ENEMY : EVENT_TYPE.HEALTH_ANIM_ALLY));
 		for(BattleEvent e : instanceEvents) {
 			screen.queue.add(e);
 		}
@@ -50,6 +80,9 @@ public class BattleProgressor {
 			System.out.print(move.getName());
 			screen.hpChange = true;
 		}
+		
+		BattleEvent.TIMESTAMP = -1;
+		SELECTED.updateLocations(POSITION.RIGHT);
 	}
 	private int calculateBaseDamage(Pokemon attacker, Pokemon target, Move move) {
 		double attackPower = ((double) (((((2 * attacker.getLevel()) / 5 + 2) * move.getPower() * (move.getCategory().equals("physical") ? (attacker.getAtk() / screen.enemy.getDef()) : (attacker.getSpAtk()) / target.getSpDef() )) / 50) + 2));

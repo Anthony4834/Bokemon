@@ -1,6 +1,7 @@
 package com.bokemon.battle;
 
 import com.badlogic.gdx.Gdx;
+import com.bokemon.battle.BattleEvent.EVENT_TYPE;
 import com.bokemon.controller.BattleController;
 import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.screen.BattleScreen;
@@ -18,6 +19,7 @@ public class BattleEvent {
 	private EVENT_TYPE type;
 	private boolean finished = true;
 	public static BattleEvent current;
+	public static int TIMESTAMP = -1;
 	
 	public BattleEvent(BattleScreen s, String dialog, EVENT_TYPE type) {
 		this.screen = s;
@@ -55,8 +57,19 @@ public class BattleEvent {
 			screen.state = BATTLE_STATE.END;
 			screen.queue.add(new BattleEvent(screen, null, EVENT_TYPE.CHANGE_STATE));
 			break;
-		case DELAY_HIT:
-			this.delayHit();
+		case DELAY:
+			this.delay();
+			break;
+		case DELAY_HIT_ENEMY:
+			this.delayHit(false);
+			break;
+		case DELAY_HIT_ALLY:
+			this.delayHit(true);
+			break;
+		case CANCEL:
+			if(screen.state.getPrevious() == BATTLE_STATE.QUESTION) {
+				goBack();
+			}
 			break;
 		default:
 			break;
@@ -67,16 +80,15 @@ public class BattleEvent {
 			case QUESTION:
 				SELECTED.updateLocations(SELECTED.POSITION.LEFT);
 				screen.selected = SELECTED.OPTION_1;
-				screen.progressor.setDialog("");
+				progressor.setDialog("");
 				screen.state = BATTLE_STATE.QUESTION_ATTACK;
 				break;
 			case QUESTION_ATTACK:
 				screen.state = BATTLE_STATE.ATTACK;
-				progressor.attackPokemon(screen.activePokemon, screen.enemy);
+				progressor.decideOrder(screen.activePokemon, screen.enemy);
 				break;
-			case ENEMY_ATTACK:
+			case ATTACK_ENEMY:
 				screen.state = BATTLE_STATE.QUESTION;
-				System.out.println("UCK");
 				break;
 			case END:
 				screen.endBattle();
@@ -94,37 +106,67 @@ public class BattleEvent {
 		RUN_AWAY,
 		USE_ITEM,
 		DIALOG,
-		DELAY_HIT
+		DELAY,
+		DELAY_HIT_ENEMY,
+		DELAY_HIT_ALLY,
+		CANCEL
 	}
-	
-	private void delayHit() {
-		current = this;
-		this.finished = false;
-		BattleEvent next = screen.queue.peek();
-		if(screen.battleTimer < 5) {
-			screen.toggleTimer(true);
+	private void delay() {
+		if(TIMESTAMP == -1) {
+			TIMESTAMP = screen.battleTimer;
 		}
 		
-		if(screen.battleTimer > 100) {
-			if(next != null) {
-				if(screen.battleTimer == 105) {
-					Jukebox.playSound(screen.queuedSound, 0.03f);
-				}
-				screen.hitEffect = true;
-				if(screen.battleTimer > 110) {
-					screen.hitEffect = false;
-					screen.toggleTimer(false);
-					screen.queue.remove();
-					next.init();
-				}
+		current = this;
+		
+		if(screen.battleTimer > TIMESTAMP + 50) {
+			TIMESTAMP = -1;
+			current = null;
+			screen.queue.remove();
+			if(!progressor.awaitingAttack) {
+				reset();
 			}
 		}
 	}
-	
-	private void hitAnim() {
-		screen.toggleTimer(true);
+	private void delayHit(Boolean ally) {
+		if(TIMESTAMP == -1) {
+			System.out.println("**********************************");
+			screen.queue.add(new BattleEvent(screen, null, ally ? EVENT_TYPE.HEALTH_ANIM_ALLY : EVENT_TYPE.HEALTH_ANIM_ENEMY));
+			TIMESTAMP = screen.battleTimer;
+		}
+		current = this;
 		
-		
+		if(screen.battleTimer > TIMESTAMP + 100) {
+			if(screen.battleTimer == TIMESTAMP + 105) {
+				Jukebox.playSound(screen.queuedSound, 0.03f);
+			}
+			if(ally)
+				screen.allyHitEffect = true;
+			else 
+				screen.enemyHitEffect = true;
+			if(screen.battleTimer > TIMESTAMP + 110) {
+				screen.allyHitEffect = false;
+				screen.enemyHitEffect = false;
+				if(screen.battleTimer < TIMESTAMP + 119) {
+					if(screen.battleTimer % 3 == 0) {
+						if(ally)
+							screen.allyFlashEffect = true;
+						else
+							screen.enemyFlashEffect = true;
+					} else {
+						screen.allyFlashEffect = false;
+						screen.enemyFlashEffect = false;
+					}
+				}
+			}
+			if(screen.battleTimer > TIMESTAMP + 120) {
+				current = null;
+				screen.allyFlashEffect = false;
+				screen.enemyFlashEffect = false;
+				screen.queue.remove();
+				TIMESTAMP = -1;
+				screen.queue.peek().init();
+			}
+		}
 	}
 	
 	private void healthAnim(Boolean ally) {
@@ -153,8 +195,15 @@ public class BattleEvent {
 				this.finished = true;
 				screen.queue.remove();
 				current = null;
+				TIMESTAMP = -1;
 				if(!screen.queue.isEmpty()) {
-					screen.queue.remove().init();
+					if(screen.queue.peek().getType() == EVENT_TYPE.DELAY ||
+					   screen.queue.peek().getType() == EVENT_TYPE.DELAY_HIT_ALLY ||
+					   screen.queue.peek().getType() == EVENT_TYPE.DELAY_HIT_ENEMY) {
+						screen.queue.peek().init();
+					} else {
+						screen.queue.remove().init();
+					}
 				} else {
 					new BattleEvent(screen, null, EVENT_TYPE.CHANGE_STATE).init();
 				}
@@ -182,10 +231,18 @@ public class BattleEvent {
 				if(target.getHp() == 0) {
 					screen.queue.add(new BattleEvent(screen, target.getName() + " fainted!", EVENT_TYPE.DIALOG));
 					screen.state = BATTLE_STATE.END;
+				} else {
+					screen.queue.add(new BattleEvent(screen, null, EVENT_TYPE.DELAY));
 				}
 				current = null;
 				if(!screen.queue.isEmpty()) {
-					screen.queue.remove().init();
+					if(screen.queue.peek().getType() == EVENT_TYPE.DELAY ||
+					   screen.queue.peek().getType() == EVENT_TYPE.DELAY_HIT_ALLY ||
+				       screen.queue.peek().getType() == EVENT_TYPE.DELAY_HIT_ENEMY) {
+						screen.queue.peek().init();
+					} else {
+						screen.queue.remove().init();
+					}
 				} else {
 					new BattleEvent(screen, null, EVENT_TYPE.CHANGE_STATE).init();
 				}
@@ -199,9 +256,15 @@ public class BattleEvent {
 		hB.colorCheck();
 	}
 	
+	private void goBack() {
+		if(screen.state.getPrevious() == BATTLE_STATE.QUESTION) {
+			reset();
+		}
+	}
 	private void reset() {
 		screen.progressor.setDialog("What should \n" + screen.activePokemon.getName() + " do?");
 		screen.selected = SELECTED.OPTION_1;
+		SELECTED.updateLocations(SELECTED.POSITION.RIGHT);
 		screen.state = BATTLE_STATE.QUESTION;
 	}
 	public Boolean isFinished() {

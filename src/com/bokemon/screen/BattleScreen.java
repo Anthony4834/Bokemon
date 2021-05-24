@@ -95,7 +95,10 @@ public class BattleScreen extends AbstractScreen {
 	
 	private boolean battleTimerStarted;
 	public int battleTimer;
-	public boolean hitEffect;
+	public boolean enemyHitEffect;
+	public boolean allyHitEffect;
+	public boolean enemyFlashEffect;
+	public boolean allyFlashEffect;
 	public String queuedSound;
 	
 	private boolean loaded = false;
@@ -106,7 +109,13 @@ public class BattleScreen extends AbstractScreen {
 		
 		battleTimerStarted = false;
 		battleTimer = 0;
-		hitEffect = false;
+		
+		toggleTimer(true);
+		
+		enemyHitEffect = false;
+		allyHitEffect = false;
+		enemyFlashEffect = false;
+		allyFlashEffect = false;
 		
 		
 		ref = Pokemon_Data.get("pokemon");
@@ -225,6 +234,11 @@ public class BattleScreen extends AbstractScreen {
 			
 			output.add(move);
 		}
+		
+		if(output.size() < 1) {
+			output.add(new Move(moveRef.getJSONObject("TACKLE")));
+		}
+		
 		return output;
 	}
 	public ArrayList<Move> buildWildMoveSet(Pokemon enemy) {
@@ -284,10 +298,29 @@ public class BattleScreen extends AbstractScreen {
 
 	@Override
 	public void render(float delta) {
+			if(BattleEvent.current != null) {
+				controller.lockFull();
+				if(BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ALLY ||
+				   BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ENEMY ||
+				   BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.DELAY_HIT_ENEMY ||
+				   BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.DELAY_HIT_ALLY ||
+				   BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.DELAY) {
+					queue.peek().init();
+				}
+			} else {
+				controller.unlock();
+			}
+			if(queue.isEmpty() && progressor.awaitingAttack && textChanging == false && enemy.getHp() > 0 && activePokemon.getHp() > 0) {
+				if(progressor.allyAwaitingAttack) {
+					progressor.attackPokemon(activePokemon, enemy, progressor.awaitingMove);
+				} else {
+					progressor.attackPokemon(enemy, activePokemon, progressor.awaitingMove);
+				}
+				progressor.awaitingAttack = false;
+			}
 			batch.begin();
 			if(battleTimerStarted) {
 				battleTimer++;
-				System.out.println(battleTimer);
 			}
 			batch.draw(background, 
 					0,
@@ -307,12 +340,14 @@ public class BattleScreen extends AbstractScreen {
 						this.loaded = true;
 						this.show();
 					}
-			batch.draw(enemyPokemonTexture,
-					hitEffect ? (float) (enemyPlatform.getX() + 1.5*Settings.SCALED_TILE_SIZE) : enemyPlatform.getX() + 1*Settings.SCALED_TILE_SIZE,
-					((float) (4.3 * enemyPlatform.getSizeY()) / Settings.SCALED_TILE_SIZE)*Settings.SCALED_TILE_SIZE,
-					enemy.getSize(),
-					enemy.getSize());
-			if(this.hitEffect) {
+			if(!enemyFlashEffect) {
+				batch.draw(enemyPokemonTexture,
+						enemyHitEffect ? (float) (enemyPlatform.getX() + 1.5*Settings.SCALED_TILE_SIZE) : enemyPlatform.getX() + 1*Settings.SCALED_TILE_SIZE,
+						((float) (4.3 * enemyPlatform.getSizeY()) / Settings.SCALED_TILE_SIZE)*Settings.SCALED_TILE_SIZE,
+						enemy.getSize(),
+						enemy.getSize());
+			}
+			if(this.enemyHitEffect) {
 				batch.draw(atlas.findRegion("hit"),
 						enemyPlatform.getX() + (float) 1.2*Settings.SCALED_TILE_SIZE,
 						((float) (5.3 * enemyPlatform.getSizeY()) / Settings.SCALED_TILE_SIZE)*Settings.SCALED_TILE_SIZE,
@@ -336,11 +371,20 @@ public class BattleScreen extends AbstractScreen {
 						textChanging = false;
 					}
 				}
-				batch.draw(allyPokemonTexture,
-						allyPlatform.getX() + 1*Settings.SCALED_TILE_SIZE,
-						6*Settings.SCALED_TILE_SIZE,
-						activePokemon.getSize() + (3*Settings.SCALED_TILE_SIZE),
-						activePokemon.getSize() + (3*Settings.SCALED_TILE_SIZE));
+				if(!allyFlashEffect) {
+					batch.draw(allyPokemonTexture,
+							allyPlatform.getX() + (allyHitEffect ? (float) 0.5*Settings.SCALED_TILE_SIZE : 1*Settings.SCALED_TILE_SIZE),
+							6*Settings.SCALED_TILE_SIZE,
+							activePokemon.getSize() + (3*Settings.SCALED_TILE_SIZE),
+							activePokemon.getSize() + (3*Settings.SCALED_TILE_SIZE));
+				}
+				if(this.allyHitEffect) {
+					batch.draw(atlas.findRegion("hit"),
+							allyPlatform.getX() + (float) 8*Settings.SCALED_TILE_SIZE,
+							((float) (3.4 * allyPlatform.getSizeY()) / Settings.SCALED_TILE_SIZE)*Settings.SCALED_TILE_SIZE,
+							100,
+							93);
+				}
 			}
 			
 			batch.draw(uiAtlas.findRegion("dialoguebox"),
@@ -385,12 +429,7 @@ public class BattleScreen extends AbstractScreen {
 						(float) (allyPlatform.getY() + allyPlatform.getSizeY() * 1.2),
 						(float) (allyHealthBar.getSizeX()),
 						allyHealthBar.getSizeY());
-						if(BattleEvent.current != null) {
-							if(BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ALLY ||
-							   BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.DELAY_HIT) {
-								queue.peek().init();
-							}
-						}
+						
 				batch.draw(xpBar.get(), 
 						(float) (allyPlatform.getX() + allyPlatform.getSizeX() * 1.255),
 						(float) (allyPlatform.getY() + allyPlatform.getSizeY() / 1.469),
@@ -414,9 +453,6 @@ public class BattleScreen extends AbstractScreen {
 						(float) (enemyPlatform.getY() + enemyPlatform.getSizeY() * 0.887),
 						(float) (enemyHealthBar.getSizeX()),
 						enemyHealthBar.getSizeY());
-						if(BattleEvent.current != null && BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ENEMY) {
-							queue.peek().init();
-						}
 			}
 			if(this.state == BATTLE_STATE.QUESTION || this.state == BATTLE_STATE.QUESTION_ATTACK) {
 				batch.draw(uiAtlas.findRegion("arrow"),
