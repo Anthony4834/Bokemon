@@ -6,147 +6,154 @@ filter: Nearest,Nearest
 repeat: none
 abra_back_sprite
   rotate: false
-  xy: 2, 142
+  xy: 2, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 abra_sprite
   rotate: false
-  xy: 2, 44
+  xy: 2, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 background
   rotate: false
-  xy: 852, 126
+  xy: 852, 140
   size: 46, 112
   orig: 46, 112
   offset: 0, 0
   index: -1
 charmander_back_sprite
   rotate: false
-  xy: 100, 142
+  xy: 100, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 charmander_sprite
   rotate: false
-  xy: 100, 44
+  xy: 100, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 dodrio_back_sprite
   rotate: false
-  xy: 198, 142
+  xy: 198, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 dodrio_sprite
   rotate: false
-  xy: 198, 44
+  xy: 198, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 eevee_back_sprite
   rotate: false
-  xy: 296, 142
+  xy: 296, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 eevee_sprite
   rotate: false
-  xy: 688, 158
+  xy: 688, 172
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
+hit
+  rotate: false
+  xy: 2, 10
+  size: 50, 46
+  orig: 50, 46
+  offset: 0, 0
+  index: -1
 hitmark
   rotate: false
-  xy: 900, 206
+  xy: 54, 24
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
   index: -1
 lapras_back_sprite
   rotate: false
-  xy: 296, 44
+  xy: 296, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 lapras_sprite
   rotate: false
-  xy: 688, 76
+  xy: 688, 90
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 pidgeotto_back_sprite
   rotate: false
-  xy: 394, 142
+  xy: 394, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 pidgeotto_sprite
   rotate: false
-  xy: 770, 158
+  xy: 770, 172
   size: 80, 80
   orig: 80, 80
   offset: 0, 0
   index: -1
 pidgey_back_sprite
   rotate: false
-  xy: 394, 44
+  xy: 394, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 pidgey_sprite
   rotate: false
-  xy: 492, 142
+  xy: 492, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 platform
   rotate: false
-  xy: 2, 10
+  xy: 900, 220
   size: 64, 32
   orig: 64, 32
   offset: 0, 0
   index: -1
 pokeball
   rotate: false
-  xy: 688, 62
+  xy: 688, 76
   size: 12, 12
   orig: 12, 12
   offset: 0, 0
   index: -1
 pokeball_effect
   rotate: false
-  xy: 770, 84
+  xy: 770, 98
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
   index: 0
 pokeball_effect
   rotate: false
-  xy: 836, 150
+  xy: 836, 164
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
   index: 1
 pokeball_effect
   rotate: false
-  xy: 844, 150
+  xy: 844, 164
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
@@ -160,56 +167,56 @@ pokeball_effect
   index: 3
 pokeball_effect
   rotate: false
-  xy: 68, 36
+  xy: 900, 212
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
   index: 4
 pokeball_effect
   rotate: false
-  xy: 900, 198
+  xy: 966, 246
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
   index: 5
 pokeball_effect
   rotate: false
-  xy: 934, 232
+  xy: 54, 16
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
   index: 6
 pokeball_effect
   rotate: false
-  xy: 688, 54
+  xy: 88, 50
   size: 6, 6
   orig: 6, 6
   offset: 0, 0
   index: 7
 skarmory_back_sprite
   rotate: false
-  xy: 492, 44
+  xy: 492, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 skarmory_sprite
   rotate: false
-  xy: 590, 142
+  xy: 590, 156
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 weedle_back_sprite
   rotate: false
-  xy: 590, 44
+  xy: 590, 58
   size: 96, 96
   orig: 96, 96
   offset: 0, 0
   index: -1
 weedle_sprite
   rotate: false
-  xy: 770, 92
+  xy: 770, 106
   size: 64, 64
   orig: 64, 64
   offset: 0, 0

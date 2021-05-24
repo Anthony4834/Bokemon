@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.bokemon.controller.BattleController;
 import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.screen.BattleScreen;
+import com.bokemon.util.Jukebox;
 
 public class BattleEvent {
 	public static int switchCounter = 0;
@@ -54,6 +55,9 @@ public class BattleEvent {
 			screen.state = BATTLE_STATE.END;
 			screen.queue.add(new BattleEvent(screen, null, EVENT_TYPE.CHANGE_STATE));
 			break;
+		case DELAY_HIT:
+			this.delayHit();
+			break;
 		default:
 			break;
 		}
@@ -89,7 +93,38 @@ public class BattleEvent {
 		SWITCH_POKEMON,
 		RUN_AWAY,
 		USE_ITEM,
-		DIALOG
+		DIALOG,
+		DELAY_HIT
+	}
+	
+	private void delayHit() {
+		current = this;
+		this.finished = false;
+		BattleEvent next = screen.queue.peek();
+		if(screen.battleTimer < 5) {
+			screen.toggleTimer(true);
+		}
+		
+		if(screen.battleTimer > 100) {
+			if(next != null) {
+				if(screen.battleTimer == 105) {
+					Jukebox.playSound(screen.queuedSound, 0.03f);
+				}
+				screen.hitEffect = true;
+				if(screen.battleTimer > 110) {
+					screen.hitEffect = false;
+					screen.toggleTimer(false);
+					screen.queue.remove();
+					next.init();
+				}
+			}
+		}
+	}
+	
+	private void hitAnim() {
+		screen.toggleTimer(true);
+		
+		
 	}
 	
 	private void healthAnim(Boolean ally) {

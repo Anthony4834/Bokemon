@@ -7,13 +7,12 @@ import java.util.Queue;
 import org.json.JSONObject;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Preferences;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.utils.Json;
 import com.bokemon.Bokemon;
 import com.bokemon.Settings;
 import com.bokemon.battle.BATTLE_STATE;
@@ -26,7 +25,6 @@ import com.bokemon.battle.SELECTED;
 import com.bokemon.battle.XpBar;
 import com.bokemon.controller.BattleController;
 import com.bokemon.model.Camera;
-import com.bokemon.model.pokemon.Capture_Calculator;
 import com.bokemon.model.pokemon.Pokemon;
 import com.bokemon.model.pokemon.Pokemon_Sprites;
 import com.bokemon.model.pokemon.TYPE;
@@ -41,7 +39,6 @@ public class BattleScreen extends AbstractScreen {
 	public TextureAtlas atlas;
 	private TextureAtlas uiAtlas;
 	public BattleController controller;
-	private Json json = new Json();
 	
 	private JSONObject ref;
 	private JSONObject typeRef;
@@ -66,8 +63,6 @@ public class BattleScreen extends AbstractScreen {
 	public Queue<BattleEvent> queue = new LinkedList<BattleEvent>();
 	public BattleEvent nextEvent = queue.peek();
 	
-	private Preferences pD = Bokemon.pokemon_data;
-	
 	public BATTLE_STATE state;
 	public BATTLE_STATE nextState;
 	public SELECTED selected;
@@ -88,9 +83,6 @@ public class BattleScreen extends AbstractScreen {
 	public ArrayList<String> allyWeaknesses;
 	public ArrayList<String> allyStrengths;
 	
-	private ArrayList<Move> allyMoveSet;
-	private ArrayList<Move> enemyMoveSet;
-	
 	private Platform enemyPlatform;
 	private Platform allyPlatform;
 	
@@ -101,24 +93,35 @@ public class BattleScreen extends AbstractScreen {
 	public float displayHp;
 	public HealthBar enemyHealthBar;
 	
+	private boolean battleTimerStarted;
+	public int battleTimer;
+	public boolean hitEffect;
+	public String queuedSound;
+	
 	private boolean loaded = false;
 	
 	
 	public BattleScreen(Bokemon app, String enemyName, boolean isWild) {
 		super(app);
 		
+		battleTimerStarted = false;
+		battleTimer = 0;
+		hitEffect = false;
+		
+		
 		ref = Pokemon_Data.get("pokemon");
 		typeRef = Pokemon_Data.get("types");
 		moveRef = Pokemon_Data.get("moves");
 		
-		this.enemy = new Pokemon(ref.getJSONObject(enemyName));
+		this.enemy = new Pokemon(ref.getJSONObject("KADABRA"));
+		
+		System.out.print("******************" + enemyName);
 
 		if(isWild) {
 			enemy.setLevel( (int) (Math.random() * (AVAILABLE_LEVELS.PALLET_TOWN.getMax() - AVAILABLE_LEVELS.PALLET_TOWN.getMin()) ) + AVAILABLE_LEVELS.PALLET_TOWN.getMin() );
 			enemy.setMoveSet(buildWildMoveSet(enemy));
 			System.out.println(enemy.getMoveSet());
 		}
-		enemy.setLevel(100);
 		enemy.updateValues();
 		enemy.setHp(enemy.getMaxHp());
 		
@@ -180,15 +183,24 @@ public class BattleScreen extends AbstractScreen {
 		System.out.println(state.toString());
 		queue.add(new BattleEvent(this, "Go, " + activePokemon.getName() + "!", EVENT_TYPE.DIALOG));
 		queue.add(new BattleEvent(this, "What should \n" + activePokemon.getName() + " do?", EVENT_TYPE.CHANGE_STATE));
+		
+		for(int i = 0; i < enemy.getMoveSet().size(); i++) {
+			System.out.println(enemy.getMoveSet().get(i).getName());
+		}
 	}
-	
+	public void toggleTimer(Boolean starting) {
+		if(starting) {
+			battleTimerStarted = true;
+		} else {
+			battleTimer = 0;
+			battleTimerStarted = false;
+		}
+	}
 	private ArrayList<Pokemon> buildParty() {
 		ArrayList<Pokemon> output = new ArrayList<Pokemon>();
 		for(int i = 1; i <= 6; i++) {
 			String name = Bokemon.prefs.getString(String.format("poke%s", i), null);
 			if(name != null) {
-				System.out.println(name);
-				
 				Pokemon toAdd = new Pokemon(ref.getJSONObject(name));
 				
 				toAdd.setMoveSet(buildMoveSet(true, i));
@@ -208,7 +220,6 @@ public class BattleScreen extends AbstractScreen {
 			if(moveName == null) {
 				continue;
 			}
-			System.out.println(" " + moveName);
 			Move move = new Move(moveRef.getJSONObject(moveName));
 			move.setPp(Bokemon.prefs.getInteger(String.format("poke%s_mv%s_pp", pokemon, i), move.getMax_pp()));
 			
@@ -219,51 +230,25 @@ public class BattleScreen extends AbstractScreen {
 	public ArrayList<Move> buildWildMoveSet(Pokemon enemy) {
 		ArrayList<Move> output = new ArrayList<Move>();
 		ArrayList<String> possible = enemy.getPossibleMoves();
-		for(int i = 0; i < possible.size() && i < 3; i++) {
+		System.out.println("POSSIBLE: " + String.valueOf(possible.size()));
+		
+		int i = 0;
+		while(i <= possible.size() && i < 4) {
 			int rand = (int) Math.random() * possible.size();
 			String moveName = possible.get(rand).toUpperCase();
+			System.out.println(moveName);
 			
 			Move move = new Move(moveRef.getJSONObject(moveName));
 			possible.remove(rand);
 			move.setPp(move.getMax_pp());
 			
 			output.add(move);
+			System.out.println(i);
+			i++;
 		}
 		
 		return output;
 	}
-	public void healthAnim() {
-		float hpBarDelta = Gdx.graphics.getDeltaTime();
-		float speed = 180;
-		float dSizeX;
-		float dHp;
-		
-		if(allyHealthBar.getSizeX() < HealthBar.max * (activePokemon.getHpPercentage() / 100)) {
-			dSizeX = allyHealthBar.getSizeX() + hpBarDelta*speed;
-			dHp = displayHp + hpBarDelta * 21;
-			if(dSizeX >= HealthBar.max * (activePokemon.getHpPercentage() / 100)) {
-				displayHp = activePokemon.getHp();
-				allyHealthBar.setSizeX((float) (HealthBar.max * (activePokemon.getHpPercentage() / 100)) );
-				this.hpChange = false;
-			} else {
-				displayHp = dHp > activePokemon.getHp() ? activePokemon.getHp() : dHp;
-				allyHealthBar.setSizeX(dSizeX);
-			}
-		} else {
-			dSizeX = allyHealthBar.getSizeX() - hpBarDelta*speed;
-			dHp = displayHp - hpBarDelta * 21;
-			if(dSizeX <= HealthBar.max * (activePokemon.getHpPercentage() / 100)) {
-				displayHp = activePokemon.getHp();
-				allyHealthBar.setSizeX((float) (HealthBar.max * (activePokemon.getHpPercentage() / 100)) );
-				this.hpChange = false;
-			} else {
-				displayHp = dHp < activePokemon.getHp() ? activePokemon.getHp() : dHp;
-				allyHealthBar.setSizeX(dSizeX);
-			}
-		}
-		allyHealthBar.colorCheck();
-	}
-	
 	public void update(Pokemon active) { //SAFE
 		this.activePokemon = active;
 		activePokemon.updateValues();
@@ -299,8 +284,11 @@ public class BattleScreen extends AbstractScreen {
 
 	@Override
 	public void render(float delta) {
-		
 			batch.begin();
+			if(battleTimerStarted) {
+				battleTimer++;
+				System.out.println(battleTimer);
+			}
 			batch.draw(background, 
 					0,
 					0,
@@ -320,10 +308,17 @@ public class BattleScreen extends AbstractScreen {
 						this.show();
 					}
 			batch.draw(enemyPokemonTexture,
-					enemyPlatform.getX() + 1*Settings.SCALED_TILE_SIZE,
+					hitEffect ? (float) (enemyPlatform.getX() + 1.5*Settings.SCALED_TILE_SIZE) : enemyPlatform.getX() + 1*Settings.SCALED_TILE_SIZE,
 					((float) (4.3 * enemyPlatform.getSizeY()) / Settings.SCALED_TILE_SIZE)*Settings.SCALED_TILE_SIZE,
 					enemy.getSize(),
 					enemy.getSize());
+			if(this.hitEffect) {
+				batch.draw(atlas.findRegion("hit"),
+						enemyPlatform.getX() + (float) 1.2*Settings.SCALED_TILE_SIZE,
+						((float) (5.3 * enemyPlatform.getSizeY()) / Settings.SCALED_TILE_SIZE)*Settings.SCALED_TILE_SIZE,
+						100,
+						93);
+			}
 			
 			batch.draw(atlas.findRegion("platform"),  //PLAYER
 					allyPlatform.getX(),
@@ -390,8 +385,11 @@ public class BattleScreen extends AbstractScreen {
 						(float) (allyPlatform.getY() + allyPlatform.getSizeY() * 1.2),
 						(float) (allyHealthBar.getSizeX()),
 						allyHealthBar.getSizeY());
-						if(BattleEvent.current != null && BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ALLY) {
-							queue.peek().init();
+						if(BattleEvent.current != null) {
+							if(BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.HEALTH_ANIM_ALLY ||
+							   BattleEvent.current.getType() == BattleEvent.EVENT_TYPE.DELAY_HIT) {
+								queue.peek().init();
+							}
 						}
 				batch.draw(xpBar.get(), 
 						(float) (allyPlatform.getX() + allyPlatform.getSizeX() * 1.255),

@@ -35,8 +35,9 @@ public class BattleProgressor {
 		int dHp = target.getHp() - dPwr;
 		target.setHp(dHp > 0 ? dHp : 0);
 		
-		screen.queue.add(new BattleEvent(screen, null, target == screen.enemy ? EVENT_TYPE.HEALTH_ANIM_ENEMY : EVENT_TYPE.HEALTH_ANIM_ALLY));
+		screen.queue.add(new BattleEvent(screen, null, EVENT_TYPE.DELAY_HIT));
 		screen.queue.peek().init();
+		screen.queue.add(new BattleEvent(screen, null, target == screen.enemy ? EVENT_TYPE.HEALTH_ANIM_ENEMY : EVENT_TYPE.HEALTH_ANIM_ALLY));
 		for(BattleEvent e : instanceEvents) {
 			screen.queue.add(e);
 		}
@@ -69,6 +70,7 @@ public class BattleProgressor {
 			output.add(instanceEvents);
 			return output;
 		}
+		screen.queuedSound = "hit";
 		if(Math.random() > 0.875) {
 			dPwr = dPwr * 2;
 			instanceEvents.add(new BattleEvent(screen, "A critical hit!", EVENT_TYPE.DIALOG));
@@ -76,10 +78,12 @@ public class BattleProgressor {
 		if(target == screen.enemy) { //IF TARGET = ENEMY
 			if(screen.enemyWeaknesses.contains(move.getType().toString())) {
 				dPwr = dPwr * 2;
+				screen.queuedSound = "hit_strong";
 				instanceEvents.add(new BattleEvent(screen, "It's super effective!", EVENT_TYPE.DIALOG));
 			}
 			if(screen.enemyStrengths.contains(move.getType().toString())) {
 				dPwr = dPwr / 2;
+				screen.queuedSound = "hit_weak";
 				instanceEvents.add(new BattleEvent(screen, "It's not very effective..", EVENT_TYPE.DIALOG));
 			}
 		} else { //IF TARGET = PLAYER

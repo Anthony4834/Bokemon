@@ -21,6 +21,9 @@ public class Jukebox {
 		music.put("wild_battle", Gdx.audio.newMusic(Gdx.files.internal("res/sounds/wild_battle.mp3")));
 		
 		sounds.put("nav", Gdx.audio.newSound(Gdx.files.internal("res/sounds/select.mp3")));
+		sounds.put("hit", Gdx.audio.newSound(Gdx.files.internal("res/sounds/battle_hit.mp3")));
+		sounds.put("hit_strong", Gdx.audio.newSound(Gdx.files.internal("res/sounds/battle_hit_strong.mp3")));
+		sounds.put("hit_weak", Gdx.audio.newSound(Gdx.files.internal("res/sounds/battle_hit_weak.mp3")));
 	}
 	
 	public static void playMusic(String s) {
@@ -37,5 +40,9 @@ public class Jukebox {
 	public static void playSound(String s) {
 		Sound sound = sounds.get(s);
 		sound.play(1f);
+	}
+	public static void playSound(String s, float vol) {
+		Sound sound = sounds.get(s);
+		sound.play(vol);
 	}
 }

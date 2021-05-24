@@ -38,7 +38,7 @@ public class Move {
 		power = move.getJSONObject("POWER").get("value").equals("null") ? 0 : Integer.valueOf(move.getJSONObject("POWER").getInt("value"));
 		priority = Integer.valueOf(move.getJSONObject("PRIORITY").getInt("value"));
 		type = TYPE.valueOf(move.getJSONObject("TYPE").getString("value").toUpperCase());
-		accuracy = Integer.valueOf(move.getJSONObject("ACCURACY").getInt("value"));
+		accuracy = move.getJSONObject("ACCURACY").get("value").equals("null") ? 0 : move.getJSONObject("ACCURACY").getInt("value");
 		name = String.valueOf(move.getJSONObject("NAME").getString("value"));
 		max_pp = Integer.valueOf(move.getJSONObject("MAX_PP").getInt("value"));
 	}
