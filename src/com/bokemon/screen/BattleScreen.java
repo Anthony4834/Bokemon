@@ -232,6 +232,9 @@ public class BattleScreen extends AbstractScreen {
 			Move move = new Move(moveRef.getJSONObject(moveName));
 			move.setPp(Bokemon.prefs.getInteger(String.format("poke%s_mv%s_pp", pokemon, i), move.getMax_pp()));
 			
+			System.out.println(move.getName());
+			System.out.println(" " + move.getEffect().toString());
+			
 			output.add(move);
 		}
 		
@@ -315,6 +318,7 @@ public class BattleScreen extends AbstractScreen {
 					progressor.attackPokemon(activePokemon, enemy, progressor.awaitingMove);
 				} else {
 					progressor.attackPokemon(enemy, activePokemon, progressor.awaitingMove);
+					this.state = BATTLE_STATE.ATTACK_ENEMY;
 				}
 				progressor.awaitingAttack = false;
 			}

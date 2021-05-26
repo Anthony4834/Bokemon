@@ -7,6 +7,7 @@ import com.bokemon.model.pokemon.TYPE;
 
 public class Move {
 	private String name;
+	private String desc;
 	private TYPE type; // 
 	private String category; //
 	private int power; // 
@@ -33,14 +34,15 @@ public class Move {
 	public Move(JSONObject move) {
 		makesContact = Boolean.valueOf(move.getJSONObject("MAKES_CONTACT").getString("value"));
 		category = String.valueOf(move.getJSONObject("CATEGORY").getString("value"));
-		effect = EFFECT.CONFUSED; //String.valueOf(move.getJSONObject("CATEGORY").getString("effect"));
 		effect_chance = move.getJSONObject("EFFECT_CHANCE").get("value").equals("null") ? 0 : move.getJSONObject("EFFECT_CHANCE").getInt("value");
 		power = move.getJSONObject("POWER").get("value").equals("null") ? 0 : Integer.valueOf(move.getJSONObject("POWER").getInt("value"));
 		priority = Integer.valueOf(move.getJSONObject("PRIORITY").getInt("value"));
 		type = TYPE.valueOf(move.getJSONObject("TYPE").getString("value").toUpperCase());
 		accuracy = move.getJSONObject("ACCURACY").get("value").equals("null") ? 0 : move.getJSONObject("ACCURACY").getInt("value");
 		name = String.valueOf(move.getJSONObject("NAME").getString("value"));
+		desc = String.valueOf(move.getJSONObject("EFFECT").getString("value"));
 		max_pp = Integer.valueOf(move.getJSONObject("MAX_PP").getInt("value"));
+		effect = fetchEffect(desc);
 	}
 	public Boolean typeComparison(Move move, Pokemon target) {
 		return ( target.isType("flying") && move.getType().equals(TYPE.GROUND) ) || ( target.isType("ghost") && move.getType().equals(TYPE.NORMAL) ) || ( target.isType("normal") && move.getType().equals(TYPE.GHOST) );
@@ -81,7 +83,14 @@ public class Move {
 		return makesContact;
 	}
 	private EFFECT fetchEffect(String desc) {
-		return null;
+		switch(desc) {
+		case "Has a $effect_chance% chance to burn the target.":
+			return EFFECT.BURNED;
+		case "Immediately ends wild battles.  No effect otherwise.":
+			return EFFECT.TELEPORT;
+		default:
+			return EFFECT.NONE;
+		}
 	}
 	public int getPriority() {
 		return priority;
@@ -96,5 +105,8 @@ public class Move {
 	}
 	public String getName() {
 		return name;
+	}
+	public String getDesc() {
+		return desc;
 	}
 }

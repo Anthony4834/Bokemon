@@ -77,6 +77,9 @@ public class BattleEvent {
 	}
 	private void changeBattleState(BATTLE_STATE state) {
 		switch(state) {
+			case INIT:
+				reset();
+				break;
 			case QUESTION:
 				SELECTED.updateLocations(SELECTED.POSITION.LEFT);
 				screen.selected = SELECTED.OPTION_1;
@@ -87,14 +90,19 @@ public class BattleEvent {
 				screen.state = BATTLE_STATE.ATTACK;
 				progressor.decideOrder(screen.activePokemon, screen.enemy);
 				break;
+			case ATTACK:
 			case ATTACK_ENEMY:
-				screen.state = BATTLE_STATE.QUESTION;
+				if(!progressor.awaitingAttack && !screen.textChanging) {
+					reset();
+				}
+				break;
+			case COME_BACK:
+				reset();
 				break;
 			case END:
 				screen.endBattle();
 				break;
 			default:
-				reset();
 				break;
 		}
 	}
@@ -122,7 +130,7 @@ public class BattleEvent {
 			TIMESTAMP = -1;
 			current = null;
 			screen.queue.remove();
-			if(!progressor.awaitingAttack) {
+			if(!progressor.awaitingAttack && !screen.textChanging) {
 				reset();
 			}
 		}

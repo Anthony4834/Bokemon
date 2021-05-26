@@ -124,7 +124,7 @@ public class Actor {
 		Bokemon.prefs.putString("poke1", "IVYSAUR");
 		Bokemon.prefs.putString("poke1_lv", "21");
 		Bokemon.prefs.putString("poke1_hp", "56");
-		Bokemon.prefs.putString("poke1_mv1", "TACKLE");
+		Bokemon.prefs.putString("poke1_mv1", "TELEPORT");
 		Bokemon.prefs.putString("poke1_mv2", "HYDRO-PUMP");
 		Bokemon.prefs.putString("poke1_mv3", "BITE");
 		Bokemon.prefs.putString("poke1_mv4", "GIGA-DRAIN");

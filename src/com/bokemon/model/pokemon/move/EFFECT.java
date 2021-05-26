@@ -13,6 +13,8 @@ public enum EFFECT {
 	LEECH(.0265, 0),
 	SCARE(0, 0),
 	CHARGE(0, 1),
+	TELEPORT(0, 0),
+	NONE(0, 0)
 	;
 	
 	private int duration;

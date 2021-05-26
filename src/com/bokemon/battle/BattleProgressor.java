@@ -7,12 +7,14 @@ import com.bokemon.battle.BattleEvent.EVENT_TYPE;
 import com.bokemon.battle.SELECTED.POSITION;
 import com.bokemon.model.pokemon.Capture_Calculator;
 import com.bokemon.model.pokemon.Pokemon;
+import com.bokemon.model.pokemon.move.EFFECT;
 import com.bokemon.model.pokemon.move.Move;
 import com.bokemon.screen.BattleScreen;
 
 public class BattleProgressor {
 	private BattleScreen screen;
 	
+	public EFFECT currentMoveEffect;
 	public Boolean awaitingAttack;
 	public Boolean allyAwaitingAttack;
 	public Move awaitingMove;
@@ -57,6 +59,8 @@ public class BattleProgressor {
 		
 		setDialog(attacker.getName() + " used " + move.getName());
 		
+		currentMoveEffect = getMoveEffects(move);
+		
 		dPwr = calculateBaseDamage(attacker, target, move);
 		
 		damageStats = initDamageModifiers(attacker, target, move, dPwr);
@@ -66,8 +70,16 @@ public class BattleProgressor {
 		int dHp = target.getHp() - dPwr;
 		target.setHp(dHp > 0 ? dHp : 0);
 		
+		if(currentMoveEffect == EFFECT.TELEPORT) {
+			screen.queue.add(new BattleEvent(screen, null, EVENT_TYPE.CHANGE_STATE));
+			screen.queue.peek().init();
+			screen.state = BATTLE_STATE.END;
+			return;
+		}
+		
 		screen.queue.add(new BattleEvent(screen, null, attacker == screen.enemy ? EVENT_TYPE.DELAY_HIT_ALLY : EVENT_TYPE.DELAY_HIT_ENEMY));
 		screen.queue.peek().init();
+		
 		for(BattleEvent e : instanceEvents) {
 			screen.queue.add(e);
 		}
@@ -132,6 +144,14 @@ public class BattleProgressor {
 		output.add((int) dPwr);
 		output.add(instanceEvents);
 		return output;
+	}
+	public EFFECT getMoveEffects(Move move) {
+		switch(move.getEffect()) {
+		case TELEPORT:
+			return EFFECT.TELEPORT;
+		default:
+			return EFFECT.NONE;
+		}
 	}
 	public void switchPokemon() {
 		if(BattleEvent.switchCounter == 0) {
